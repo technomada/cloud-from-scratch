@@ -68,7 +68,7 @@ For text editing we'll use vim, feel free to replace vim with the text editor of
 
 
 ## Provision Edge Node
-The Edge node is a lightwight always online, public access gateway, it mainly routes traffic and helps avoid NAT issues.
+The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and helps mitigate NAT issues.
 
 Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  [use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr](https://vultr.com).
 
