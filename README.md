@@ -450,4 +450,11 @@ $ sudo vim /etc/hosts
 $ curl -v https://example.com
 ```
 
-### next: applications
+## Applications
+Any good cloud needs to do things, you'll be able to build your cloud into whatever suits you. Here are a few examples to get you started.
+
+[Ghost](apps/ghost.md)
+[GOGS](apps/gogs.md)
+[Express](apps/express.md)
+
+[More](apps/README.md)
