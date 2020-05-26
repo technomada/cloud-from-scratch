@@ -266,7 +266,7 @@ download (raspbian buster lite at the time of this tutorial)
 
 Create the bootable sdcard
 
-** Be careful with this step!  Be sure of your of=/dev/(yourdevhere) link. **
+**** Be careful with this step!  Be sure of your of=/dev/(yourdevhere) link. ****
 ```
 $ unzip 2020-02-13-raspbian-buster-lite.zip
 $ sudo dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevicehere) bs=4M status=progress conv=fsync
