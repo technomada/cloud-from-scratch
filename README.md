@@ -61,6 +61,8 @@ For text editing we'll use vim, feel free to replace vim with the text editor of
 
 
 ## Provision Edge Node
+The Edge node is a lightwight always online, public access gateway, it mainly routes traffic and helps avoid NAT issues.
+
 Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  [use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr](https://vultr.com).
 
 Any level >= 512MB will likely do. Create a new instance using Debian 10 (Buster)
@@ -241,6 +243,8 @@ $ curl -v http://example.com
 It should show "It Works!!"
 
 ## Local Node
+Local nodes live within your home network and in this system are where everything is stored, lives and happens.  Cloud systems can be built from one or more hosts, but to keep things simple we'll start out with just one host, a raspberry PI.
+
 Get PI
 PI (Amazon)
 SD Card (Amazon)
