@@ -8,14 +8,16 @@ Get your creative juices flowing with this list of applications to install to yo
 * Utility
 
 ## Development
-* Express
+* [Express](express.md)
 
 ## Productivity
-* GOGS -- https://hub.docker.com/r/gogs/gogs/
+* [GOGS](gogs.md) -- https://hub.docker.com/r/gogs/gogs/
 
 ## Social
-* Ghost -- https://hub.docker.com/_/ghost
+* [Ghost](ghost.md) -- https://hub.docker.com/_/ghost
 * Wordpress -- https://hub.docker.com/_/wordpress/
 
 ## Utility
 * OpenMap [no arm] - https://openmaptiles.com/server/
+
+Have an idea for an app listed here?  Make a pull request!
