@@ -451,10 +451,10 @@ $ curl -v https://example.com
 ```
 
 ## Applications
-Any good cloud needs to do things, you'll be able to build your cloud into whatever suits you. Here are a few examples to get you started.
+Finally, a cloud needs to do things, you'll be able to build your cloud into whatever suits you. Here are a few examples to get you started.
 
-[Ghost](apps/ghost.md)
-[GOGS](apps/gogs.md)
-[Express](apps/express.md)
+* [Ghost](apps/ghost.md)
+* [GOGS](apps/gogs.md)
+* [Express](apps/express.md)
 
-[More](apps/README.md)
+* [More](apps/README.md)
