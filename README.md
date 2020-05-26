@@ -243,7 +243,7 @@ $ curl -v http://example.com
 It should show "It Works!!"
 
 ## Local Node
-Local nodes live within your home network and in this system are where everything is stored, lives and happens.  Cloud systems can be built from one or more hosts, but to keep things simple we'll start out with just one host, a raspberry PI.
+Local nodes live within your home network and in this system are pretty much where everything is stored, lives and happens.  Cloud systems can be built from one or more hosts, but to keep things simple we'll start out with just one host, a raspberry PI.
 
 Get PI
 PI (Amazon)
