@@ -3,7 +3,7 @@
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
 
-You may be surpized to find that building and maintaining your own cloud using your own equipment hosted in your own home, is not only not difficult, but really fun and rewarding. The following instructions should provide everything you need to build a multi host capable personal cloud computing platform from scratch. Using primarily existing technologies and inspired by the "Arch Way" (Simplicity, Modernity, Pragmatism, User centrality, Versatility) this cloud design project aims to require a small amount of technical attention and allow a wide range of functionality. After completing the following steps you'll have yourself a fully functional personal cloud system ready to be shaped into the services you wish. I don't know about you, but I know I'm excited, so let's get started.
+You may be surprized to find that building and maintaining your own private cloud system, using your own equipment, hosted in your own home, is not only possible, it's not extraordinarily difficult, and actually it's really fun and rewarding. The following instructions should provide everything you need to build a multi host capable personal cloud computing platform from scratch. Using primarily off the shelf technologies and inspired by the "Arch Way" (Simplicity, Modernity, Pragmatism, User centrality, Versatility) this project aims to require only a small amount of technical attention and allow a wide range of functionality. After completing the following steps you'll have yourself a fully functional personal private cloud system ready to be shaped into the services you wish. I don't know about you, but I know I'm excited, so let's get started.
 
 
 # Overview
