@@ -476,4 +476,5 @@ Why run a personal cloud.
 * Personaliztion
 * Privacy
 * Options
+* Speed
 * "Unlimited" Storage
