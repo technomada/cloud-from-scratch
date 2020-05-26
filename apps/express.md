@@ -52,4 +52,5 @@ $ docker restart caddy_web_server
 ```
 
 browse 	[http://example.com/example]  --- Hello!
+
 browse	[http://example.com/example/api] --- true
