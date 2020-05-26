@@ -3,7 +3,7 @@
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
 
-You may be surprized to find that building and maintaining your own private cloud system, using your own equipment, hosted in your own home, is not only possible, it's not extraordinarily difficult, and actually it's really fun and rewarding. The following instructions should provide everything you need to build a multi host capable personal cloud computing platform from scratch. Using primarily off the shelf technologies and inspired by the "Arch Way" (Simplicity, Modernity, Pragmatism, User centrality, Versatility) this project aims to require only a small amount of technical attention and allow a wide range of functionality. After completing the following steps you'll have yourself a fully functional personal private cloud system ready to be shaped into the services you wish. I don't know about you, but I know I'm excited, so let's get started.
+You may be surprized to find that building and maintaining your own private cloud system, using your own equipment, hosted in your own home, is not only possible, it's not extraordinarily difficult, and actually it's really fun and rewarding. The following instructions should provide everything you need to build a multi host capable personal cloud computing platform from scratch. Using primarily off the shelf technologies and inspired by the "Arch Way" (Simplicity, Modernity, Pragmatism, User centrality, Versatility) this project aims to require only a small amount of technical attention and allow a wide range of functionality. After completing the following steps you'll have yourself a fully functional personal private cloud system ready to be shaped into the services you wish.  I don't know about you, but I know I'm excited, so let's get started.
 
 
 # Overview
@@ -32,6 +32,13 @@ When completed the system looks something like this.
          ** Internet  **                               ** Home Network Cloud **
 
 ```
+
+From this platform you'll be able to install, own, operate and access from anywhere, from any device,  any service or feature you choose.
+
+* Chat * Photos * Calls * File Storage * Music * Notes * Weather * News * More *
+
+Ok, Let's get started.
+
 
 ## Sections
 * Provision Edge Node
