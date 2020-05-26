@@ -436,4 +436,12 @@ $ curl -v example.com
 ```
 should see.. Yay!  It Works! 
 
+try globally (comment out locally host mapping)
+```
+$ sudo vim /etc/hosts
+#192.168.1.2 example.com
+
+$ curl -v https://example.com
+```
+
 ### next: applications
