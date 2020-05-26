@@ -35,7 +35,7 @@ When completed the system looks something like this.
 
 From this platform you'll be able to install, own, operate and access from anywhere, from any device,  any service or feature you choose.
 
-* Chat * Photos * Calls * File Storage * Music * Notes * Weather * News * More *
+Chat * Photos * Calls * File Storage * Music * Notes * Weather * News * Etc
 
 Ok, Let's get started.
 
