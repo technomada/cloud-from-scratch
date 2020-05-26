@@ -457,4 +457,6 @@ Finally, a cloud needs to do things, you'll be able to build your cloud into wha
 * [GOGS](apps/gogs.md)
 * [Express](apps/express.md)
 
-* [More](apps/README.md)
+There's plenty [more](apps/README.md) one can install, and more become available all the time.
+
+There you have it.  Your own cloud.  Let us know what you do with yours!
