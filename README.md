@@ -359,6 +359,11 @@ $ vim /wireguard/etc/wg0.conf
 PublicKey = this-local-node-public-key-goes-here=
 AllowedIPs = 10.1.1.2/32
 ```
+(on edge node) restart wireguard
+```
+$ wg-quick down wg0
+$ wg-quick up wg0
+```
 
 Continue on your local node... activate wg
 ```
