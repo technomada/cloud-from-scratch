@@ -469,7 +469,7 @@ There you have it.  Your own cloud.  Let us know what you do with yours!
 ## Disscussion
 
 Why run a personal cloud.
-* Ad Free (Cleaner/Faster)
+* Ad Free (Calmer/Cleaner/Faster)
 * Control
 * Convienence
 * Persistance
