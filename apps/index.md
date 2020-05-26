@@ -1,4 +1,6 @@
-# Application Index
+# Applications
+
+Get your creative juices flowing with this list of applications to install to your cloud.
 
 * Development
 * Productivty
