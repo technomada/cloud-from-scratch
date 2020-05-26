@@ -246,7 +246,9 @@ It should show "It Works!!"
 Local nodes live within your home network and in this system are pretty much where everything is stored, lives and happens.  Cloud systems can be built from one or more hosts, but to keep things simple we'll start out with just one host, a raspberry PI.
 
 Get PI
+
 PI (Amazon)
+
 SD Card (Amazon)
 
 Install Raspbian
@@ -393,17 +395,17 @@ $ sudo docker run hello-world
 
 Create Network "Master"
 ```
-$ docker network create -d bridge master
+$ sudo docker network create -d bridge master
 ```
 
 
 ### Caddy 
-
+```
 $ vim ~/Caddyfile
 http://example.com {
        respond "Yay!  It Works!"
        }
-
+```
 (replace example.com with your domain)
 
 Setup Caddy Folders
@@ -424,9 +426,9 @@ $ sudo vim /etc/hosts
 192.168.1.2 example.com
 ```
 .. replace 192.168.1.2 with the ip of your local node.  and example.com with the domain you're using.
-
+```
 $ curl -v example.com
-should see..
-Yay!  It Works! 
+```
+should see.. Yay!  It Works! 
 
 ### next: applications
