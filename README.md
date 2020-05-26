@@ -69,7 +69,7 @@ These instructions assume you are comfortable with basic command line based inst
 ## Provision Edge Node
 The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and helps mitigate NAT issues.
 
-Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  [use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr](https://vultr.com).
+Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  [use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr $100 Free](https://www.vultr.com/?ref=8580218-6G).
 
 Any instance tier level with 512MB ram or more should be plenty good.
 
