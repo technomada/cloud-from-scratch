@@ -360,6 +360,14 @@ $ sudo wg
 ```
 Should see up and down traffic (if no down traffic verify Endpoint address.)
 
+Enable Wireguard to start automatically at boot
+```
+$ systemctl enable wg-quick@wg0.service
+$ systemctl daemon-reload
+$ systemctl start wg-quick@wg0
+$ reboot ... (to check that is working)
+$ systemctl status wg-quick@wg0
+```
 
 ### Docker
 ```
