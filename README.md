@@ -44,7 +44,7 @@ When completed the system looks something like this.
   * Register Domain (or use an existing one)
   * Cloudflare Setup
 
-* Build Local Node
+* Build a Local Node
   * Configure OS
   * Wireguard
   * Docker
