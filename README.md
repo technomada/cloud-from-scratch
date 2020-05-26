@@ -1,4 +1,4 @@
-[Updated 2020.05.25]
+[Updated 2020.05.26]
 
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
