@@ -20,4 +20,4 @@ Get your creative juices flowing with this list of applications to install to yo
 ## Utility
 * OpenMap [no arm] - https://openmaptiles.com/server/
 
-Have an idea for an app listed here?  Make a pull request!
+Have an idea for an app to be listed here?  Make a pull request!
