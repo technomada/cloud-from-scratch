@@ -71,9 +71,11 @@ The edge node functions as a lightweight, always online, public access gateway, 
 
 Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  [use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr](https://vultr.com).
 
-Any level >= 512MB will likely do. Create a new instance using Debian 10 (Buster)
+Any instance tier level with 512MB ram or more should be plenty good.
 
-Log in via SSH to your new server.
+Create a new instance using Debian 10 (Buster)
+
+Log in via SSH to your new server and update the system.
 
 ```
 $ apt update
@@ -262,20 +264,25 @@ note: if you don't have a pi, you could use a virtual machine, or laptop) if so 
 
 download (raspbian buster lite at the time of this tutorial)
 
-unzip
+Create the bootable sdcard
+
+** Be careful with this step!  Be sure of your of=/dev/(yourdevhere) link. **
 ```
+$ unzip 2020-02-13-raspbian-buster-lite.zip
 $ sudo dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevicehere) bs=4M status=progress conv=fsync
-or
-- sudo unzip -p 2020-02-13-raspbian-buster.zip | dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
+
+or in one step
+
+$ sudo unzip -p 2020-02-13-raspbian-buster.zip | dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
 ```
-Do be careful with this command!  Be sure of your of=/dev/(yourdevhere) link.
 
 enable ssh: place a file named ssh, without any extension, onto the boot partition before booting.
  
 login
 
---user--: pi
---password--: raspberry
+**user** pi
+
+**password** raspberry
 
 Initial Configuration
 ```
