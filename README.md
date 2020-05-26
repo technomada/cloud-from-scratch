@@ -29,7 +29,7 @@ When completed the system looks something like this.
                                                 +----------------------------------+
                                                 
                                                 
-         ** Internet  **                                  ** Home Network Cloud **
+         ** Internet  **                               ** Home Network Cloud **
 
 ```
 
