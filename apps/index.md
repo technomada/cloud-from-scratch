@@ -6,14 +6,14 @@
 * Utility
 
 ## Development
-Express
+* Express
 
 ## Productivity
-GOGS -- https://hub.docker.com/r/gogs/gogs/
+* GOGS -- https://hub.docker.com/r/gogs/gogs/
 
 ## Social
-Ghost -- https://hub.docker.com/_/ghost
-Wordpress -- https://hub.docker.com/_/wordpress/
+* Ghost -- https://hub.docker.com/_/ghost
+* Wordpress -- https://hub.docker.com/_/wordpress/
 
 ## Utility
-OpenMap [no arm] - https://openmaptiles.com/server/
+* OpenMap [no arm] - https://openmaptiles.com/server/
