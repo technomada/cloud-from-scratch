@@ -8,7 +8,7 @@ $ mkdir ~/app/example/www
 $ cd ~/app/example
 
 $ vim www/index.html
-Hello!.
+Hello!
 
 $ vim server.js
 let express = require('express')
@@ -26,14 +26,14 @@ app.listen(3000,()=>{})
 
 Init app
 ```
-$ docker run --rm -w /src -v $PWD:/src node npm init
-$ docker run -it --rm -v $PWD:/usr/src/app -w /usr/src/app node npm init
-$ docker run -it --rm -v $PWD:/usr/src/app -w /usr/src/app node npm i -S express
+$ sudo docker run -it --rm -w /src -v $PWD:/src node npm init
+$ sudo docker run -it --rm -v $PWD:/usr/src/app -w /usr/src/app node npm init
+$ sudo docker run -it --rm -v $PWD:/usr/src/app -w /usr/src/app node npm i -S express
 ```
 
 Start app
 ```
-$ docker run -d --restart=always --name=example_app --network=master -v /home/pi/apps/example:/usr/src/app -w /usr/src/app node node server.js
+$ sudo docker run -d --restart=always --name=example_app --network=master -v /home/pi/apps/example:/usr/src/app -w /usr/src/app node node server.js
 ```
 
 Map app into your domain
