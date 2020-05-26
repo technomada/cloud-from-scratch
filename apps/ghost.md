@@ -22,6 +22,8 @@ $ docker restart caddy_web_server
 ```
 (replace example.com with your domain)
 
+```
 $ docker run -d --restart=always --name ghost_blog --network master -e url=https://example.com/blog/ -v /home/pi/ghost:/var/lib/ghost/content ghost
+```
 
 Browse [https://example.com/blog/ghost/]
