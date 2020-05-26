@@ -39,6 +39,12 @@ Chat * Photos * Calls * File Storage * Music * Notes * Weather * News * Etc
 
 Ok, Let's get started.
 
+## Requirements
+For this setup you'll need...
+* Raspbery PI (or adopt the instructions to a PC or Virtual Machine)
+* Cloudflare Account
+* VPS Account (Linode/Digital Ocean/Vultr)
+* Domain Name
 
 ## Sections
 * Provision Edge Node
