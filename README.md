@@ -50,7 +50,7 @@ When completed the system looks something like this.
   * Docker
   * Caddy
 
-* Setup Applications
+* Setup Example Applications
   * Ghost
   * GOGS
   * Express
