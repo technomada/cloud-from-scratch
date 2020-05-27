@@ -20,4 +20,7 @@ Get your creative juices flowing with this list of applications to install to yo
 ## Utility
 * OpenMap [no arm] - https://openmaptiles.com/server/
 
+## More Resources
+* https://github.com/awesome-selfhosted/awesome-selfhosted
+
 Have an idea for an app to be listed here?  Make a pull request!
