@@ -232,16 +232,16 @@ SSL/TLS - Full (strict)
 Modify Edge Node Caddyfile
 ```
 $ vim ~/Caddyfile
-`example.com`:80 {
-        tls certs@`example.com`
+example.com:80 {
+        tls certs@example.com
 
         #reverse_proxy 10.1.1.2:80
 	      respond "It Works!!"
                 }
 ```
-Replace '`example.com`' with your domain name.  Replace 'certs@example.com' with your domain's admin email address.
+Replace `example.com` with your domain name.  Replace 'certs@example.com' with your domain's admin email address.
 
-In future references to 'example.com' replace 'example.com' with your domain name.
+In future references to `example.com` replace `example.com` with your domain name.
 
 Restart Caddy
 ```
