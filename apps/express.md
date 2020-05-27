@@ -8,11 +8,13 @@ $ mkdir ~/app/example/www
 $ cd ~/app/example
 ```
 
+Edit index.html
 ```
 $ vim www/index.html
 Hello!
 ```
 
+Edit server.js
 ```
 $ vim server.js
 let express = require('express')
