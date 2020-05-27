@@ -484,3 +484,9 @@ Why run a personal cloud.
 * Options
 * Speed
 * "Unlimited" Storage
+
+### Interesting Links
+
+* https://www.inkandswitch.com/local-first.html
+* https://www.reddit.com/r/selfhosted/
+
