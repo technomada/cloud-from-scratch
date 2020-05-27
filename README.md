@@ -47,7 +47,7 @@ For this setup you'll need...
 * VPS Account (Linode/Digital Ocean/Vultr)
 
 ## Sections
-  * Provision Edge Node
+* Provision Edge Node
   * VPS Instance
   * Wireguard
   * Docker
