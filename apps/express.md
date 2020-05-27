@@ -6,10 +6,14 @@ $ mkdir ~/app
 $ mkdir ~/app/example
 $ mkdir ~/app/example/www
 $ cd ~/app/example
+```
 
+```
 $ vim www/index.html
 Hello!
+```
 
+```
 $ vim server.js
 let express = require('express')
 let path = require('path')
