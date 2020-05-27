@@ -41,13 +41,13 @@ Ok, Let's get started.
 
 ## Requirements
 For this setup you'll need...
-* Raspbery PI (or adopt the instructions to a PC or Virtual Machine)
 * Cloudflare Account
-* VPS Account (Linode/Digital Ocean/Vultr)
 * Domain Name
+* Raspbery PI (or adopt the instructions to a PC or Virtual Machine)
+* VPS Account (Linode/Digital Ocean/Vultr)
 
 ## Sections
-* Provision Edge Node
+  * Provision Edge Node
   * VPS Instance
   * Wireguard
   * Docker
@@ -232,14 +232,14 @@ SSL/TLS - Full (strict)
 Modify Edge Node Caddyfile
 ```
 $ vim ~/Caddyfile
-example.com:80 {
-        tls certs@example.com
+`example.com`:80 {
+        tls certs@`example.com`
 
         #reverse_proxy 10.1.1.2:80
 	      respond "It Works!!"
                 }
 ```
-Replace 'example.com' with your domain name.  Replace 'certs@example.com' with your domain's admin email address.
+Replace '`example.com`' with your domain name.  Replace 'certs@example.com' with your domain's admin email address.
 
 In future references to 'example.com' replace 'example.com' with your domain name.
 
