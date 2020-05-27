@@ -489,4 +489,5 @@ Why run a personal cloud.
 
 * https://www.inkandswitch.com/local-first.html
 * https://www.reddit.com/r/selfhosted/
+* https://neustadt.fr/essays/against-a-user-hostile-web/
 
