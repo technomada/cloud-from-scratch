@@ -22,9 +22,9 @@ When completed the system looks something like this.
                                       |         |    [ ------ Caddy ---------]     |
                                       |         |       |       |        |         |
                                       |         |       v       |        v         |
-                                      |         |     [Ghost]   |    [Express]     |
+                                      |         |     [APP]     |      [APP]       |
                                       |         |               v                  |
-                                      |         |             [GOGS]               |
+                                      |         |             [APP]                |
                                       |         |                                  |
                                                 +----------------------------------+
                                                 
