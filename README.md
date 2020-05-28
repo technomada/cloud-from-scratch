@@ -89,9 +89,9 @@ Any tier level with at least **512MB RAM** should be enough.
 
 Create a new instance using **Debian 10** (Buster)
 
-* Go ahead and provision your server now, return here when you're done.
-
 Log in via SSH to your new server and update the system.
+
+`$ ssh root@your-new-server-ip`
 
 ```
 $ apt update
