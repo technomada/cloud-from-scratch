@@ -7,6 +7,9 @@ Get your creative juices flowing with this list of applications to install to yo
 * Social
 * Utility
 
+## Cloud Management
+* [OpenFaaS](https://www.openfaas.com/)
+
 ## Development
 * [Express](express.md)
 
