@@ -500,6 +500,10 @@ Why run a personal cloud.
 * https://www.reddit.com/r/selfhosted/
 * https://neustadt.fr/essays/against-a-user-hostile-web/
 
+### Similar Projects
+* https://github.com/progmaticltd/homebox
+* https://github.com/sovereign/sovereign
+
 ### GUI/Automated run your own cloud systems
 * https://caprover.com/
 * https://cloudron.io/
