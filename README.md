@@ -3,7 +3,7 @@
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
 
-You may be surprized to find that building and maintaining your own private cloud system, using your own equipment, hosted in your own home, is not only possible, it's not extraordinarily difficult, and actually it's really fun and rewarding. The following instructions should provide everything you need to build a multi host capable personal cloud computing platform from scratch. Using primarily off the shelf technologies and inspired by the "Arch Way" (Simplicity, Modernity, Pragmatism, User centrality, Versatility) this project aims to require only a small amount of technical attention and allow a wide range of expression and functionality. After completing the following steps you'll have yourself a fully functional personal private cloud system ready to be shaped into the services you wish.  I don't know about you, but I know I'm excited, so let's get started.
+You may be surprized to find that building and maintaining your own private cloud system, using your own equipment, hosted in your own home, is not only possible, it's relatively easy and is really fun and rewarding. The following instructions should provide everything you need to build a multi-host capable personal cloud computing platform from scratch. Using primarily off the shelf technologies and inspired by the "Arch Way" (**Simplicity, Modernity, Pragmatism, User centrality, Versatility**) this project aims to require only a small amount of technical attention and allow a wide range of expression and functionality. After completing the following steps you'll have yourself a fully functional personal private cloud system ready to be shaped into the services you wish.  I don't know about you, but I know I'm excited, so let's get started.
 
 
 # Overview
@@ -35,7 +35,7 @@ When completed the system looks something like this.
 
 ```
 
-From this platform you'll be able to install, own, operate and access from anywhere, from any device any cloudable software you choose to install.
+From this platform you'll be able to install, own, operate and access from anywhere, from any device, any cloudable software you choose to install.
 
 Chat * Photos * Calls * File Storage * Music * Notes * Weather * News * Etc
 
@@ -43,45 +43,48 @@ Ok, Let's get started.
 
 ## Requirements
 For this setup you'll need...
-* Cloudflare Account
-* Domain Name
-* Raspbery PI (or adopt the instructions to a PC or Virtual Machine)
-* VPS Account (Linode/Digital Ocean/Vultr)
+* **Cloudflare Account**
+* **Domain Name**
+* **Raspbery PI** (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
+* **VPS Account** (Linode/Digital Ocean/Vultr)
 
 ## Sections
-* Provision Edge Node
+* **Provision Edge Node**
   * VPS Instance
   * Wireguard
   * Docker
   * Caddy
 
-* Setup Domain
+* **Setup Domain**
   * Register Domain (or use an existing one)
   * Cloudflare Setup
 
-* Build a Local Node
+* **Build a Local Node**
   * Configure OS
   * Wireguard
   * Docker
   * Caddy
 
-* Setup Example Applications
+* Example Applications
   * Ghost
   * GOGS
   * Express
 
 * Troubleshooting
+* Optional Configurations
+* Discussion
+* Links
 
-These instructions assume you are comfortable with basic command line based installation and configuration.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
+These instructions assume you are comfortable with command line based installation and configuration, it helps if you're familure with docker.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
 
 ## Provision Edge Node
 The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and helps mitigate NAT issues.
 
-Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  [use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr $100 Free](https://www.vultr.com/?ref=8580218-6G).
+Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  (use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr $100 Free](https://www.vultr.com/?ref=8580218-6G).)
 
-Any instance tier level with 512MB ram or more should be plenty good.
+Any tier level with at least **512MB RAM** should be enough.
 
-Create a new instance using Debian 10 (Buster)
+Create a new instance using **Debian 10** (Buster)
 
 Log in via SSH to your new server and update the system.
 
@@ -179,7 +182,7 @@ $ apt update
 $ apt install docker-ce docker-ce-cli containerd.io
 ```
 
-Test (should download and run docker hello world image)
+Test (this should download and run docker hello world image)
 ```
 $ docker run hello-world  
 ```
@@ -225,9 +228,9 @@ Use your own existing domain or register a new one.  | [namecheap](https://namec
 ### Cloudflare
 Use [CloudFlare](https://cloudflare.com) as your name server (set your domain name name servers as your cloudflare account instructs.)
 
-Configure cloudflare A record to point to the IP of your VPS.  **WITH** cloudflare proxy enabled.
+Configure cloudflare A record to point to the IP of your VPS.  **WITH cloudflare proxy** enabled.
 
-Configure cloudflare A record edge.example.com (replace .example.com with your domain name) point it to the IP of your VPS **WITHOUT** cloudflare proxy enabled.
+Configure cloudflare A record edge.example.com (replace .example.com with your domain name) point it to the IP of your VPS **WITHOUT cloudflare proxy** enabled.
 
 SSL/TLS - Full (strict)
  
@@ -257,18 +260,18 @@ $ curl -v http://example.com
 It should show "It Works!!"
 
 ## Local Node
-Local nodes live within your home network and in this system are pretty much where everything is stored, lives and happens.  Cloud systems can be built from one or more hosts, but to keep things simple we'll start out with just one host, a raspberry PI.
+Local nodes live within your home network.  In this system local nodes are pretty much where everything lives and happens.  Cloud systems can be built from one or more hosts, but to keep things simple we'll start out with just one node, a Raspberry Pi.
 
-Get PI
+Get Pi
 
-PI (Amazon)
+Pi (Amazon)
 
 SD Card (Amazon)
 
 Install Raspbian
-note: if you don't have a pi, you could use a virtual machine, or laptop) if so note may need to adapt instructions.
+Note: if you don't have a Pi, you could use a virtual machine, or laptop if so note you may need to adapt these instructions to your situation.
 
-download (raspbian buster lite at the time of this tutorial)
+Download (Raspbian Buster Lite at the time of this tutorial)
 
 Create the bootable sdcard
 
@@ -276,13 +279,13 @@ Create the bootable sdcard
 ```
 $ unzip 2020-02-13-raspbian-buster-lite.zip
 $ sudo dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevicehere) bs=4M status=progress conv=fsync
-
-or in one step
-
+```
+**or** in one step
+```
 $ sudo unzip -p 2020-02-13-raspbian-buster.zip | dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
 ```
 
-enable ssh: place a file named ssh, without any extension, onto the boot partition before booting.
+Enable ssh: place a file named ssh, without any extension, onto the boot partition before booting.
  
 login
 
@@ -360,16 +363,16 @@ PersistentKeepalive = 25
 ```
 
 IMPORTANT KEY PLACEMENTS
-Replace 'edge.exmaple.com' with your edge.yourdomain.com setting from the cloudflare domain setting step.
+Replace `edge.exmaple.com` with your `edge.yourdomain.com` setting from the cloudflare domain setting step.
 
-Copy the PUBLIC key FROM your EDGE SERVER to the [Peer] PublicKey Here
+Copy the **PUBLIC** key of your **EDGE SERVER** to the [Peer] PublicKey Here
 
 Move wg0.conf to /etc/wireguard
 ```
 $ sudo mv wg0.conf /etc/wireguard
 ```
 
-Copy your PUBLIC key from your LOCAL HOST server to the publickey in your EDGE NODE wg0.conf file
+Copy your **PUBLIC** key of your **LOCAL NODE** to the publickey in your EDGE NODE wg0.conf file
 ```
 (ON EDGE NODE)
 $ vim /wireguard/etc/wg0.conf
@@ -449,13 +452,13 @@ Testing
 $ sudo vim /etc/hosts
 192.168.1.2 example.com
 ```
-.. replace 192.168.1.2 with the ip of your local node.  and example.com with the domain you're using.
+.. replace `192.168.1.2` with the ip of your local node.  and `example.com` with the domain you're using.
 ```
 $ curl -v example.com
 ```
-should see.. Yay!  It Works! 
+You should see.. Yay!  It Works! 
 
-try globally (comment out locally host mapping)
+Try globally (comment out locally host mapping)
 ```
 $ sudo vim /etc/hosts
 #192.168.1.2 example.com
@@ -470,7 +473,7 @@ Finally, a cloud needs to do things, you'll be able to build your cloud into wha
 * [GOGS](apps/gogs.md)
 * [Express](apps/express.md)
 
-There's plenty [more](apps/README.md) one can install, and more become available all the time.
+There's plenty [more](apps/README.md) one can install, and more becomes available all the time.
 
 There you have it.  Your own cloud.  Let us know what you do with yours!
 
