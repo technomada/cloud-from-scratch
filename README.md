@@ -1,4 +1,4 @@
-[Updated 2020.05.27]
+[Updated 2020.05.28]
 
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
@@ -91,7 +91,7 @@ Create a new instance using **Debian 10** (Buster)
 
 Log in via SSH to your new server and update the system.
 
-`$ ssh root@your-new-server-ip`
+```$ ssh root@your-new-server-ip```
 
 ```
 $ apt update
