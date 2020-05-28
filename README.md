@@ -232,7 +232,7 @@ Configure cloudflare A record to point to the IP of your VPS.  **WITH cloudflare
 
 Configure cloudflare A record edge.example.com (replace .example.com with your domain name) point it to the IP of your VPS **WITHOUT cloudflare proxy** enabled.
 
-SSL/TLS - Full (strict)
+SSL/TLS - **Full (strict)**
  
 Modify Edge Node Caddyfile
 ```
