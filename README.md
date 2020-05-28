@@ -83,16 +83,18 @@ Prefer something a little more automated?  Consider one of [these](#web-gui-auto
 ## Provision Edge Node
 The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and helps mitigate NAT issues.
 
-Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  (use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr $100 Free](https://www.vultr.com/?ref=8580218-6G).)
+Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  (use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr $100 free credit for 30 days](https://www.vultr.com/?ref=8580218-6G).)
 
 Any tier level with at least **512MB RAM** should be enough.
 
 Create a new instance using **Debian 10** (Buster)
 
-Log in via SSH to your new server and update the system.
+Log in via SSH to your new server
+```
+$ ssh root@your-new-server-ip
+```
 
-```$ ssh root@your-new-server-ip```
-
+and update the system
 ```
 $ apt update
 $ apt upgrade
@@ -107,18 +109,27 @@ Edit sources.list, add buster-backports, install wireguard.
 
 ```
 $ vim /etc/apt/sources.list.d/sources.list
-  deb https://deb.debian.org/debian buster-backports main
+```
 
+add
+```
+deb https://deb.debian.org/debian buster-backports main
+```
+
+install wireguard
+```
 $ apt update
 $ apt -t buster-backports install "wireguard"
 
 $ reboot
 ```
+Reconnect to server after reboot.
 
 Verify Install
 ```
 $ which wg
 ```
+(should see something like `/usr/bin/wg`)
 
 Generate Wireguard Keys
 ```
@@ -128,28 +139,36 @@ $ cd wg-setup
 
 $ wg genkey | tee privatekey | wg pubkey > publickey
 ```
+(contents of privatekey or public key file look like `ayQFJiofd+fji2oDi8N/Jfi3=`)
 
 Create wg0.conf file
 ```
 $ vim wg0.conf
+```
+We're using `10.1.1.1/24` from here forward you may use this or your own preference for the wireguard network.  ListenPort may also be your choice.  Here we'll use `51820`.
+```
 [Interface]
 Address = 10.1.1.1/24
 ListenPort = 51820
-PrivateKey = your-private-key=
+PrivateKey = your-private-key-text-from-privatekey-genearation=
 
-[Peer]
-#client 1 -- living room
-PublicKey = clients-public-key=
-AllowedIPs = 10.1.1.2/32
+[#iPeer]
+##client 1 -- living room
+#PublicKey = clients-public-key-from-a-future-step=
+#AllowedIPs = 10.1.1.2/32
 
-[Peer]
-#remote pi 1 -- kitchen
-PublicKey = clients-public-key= 
-AllowedIPs = 10.1.1.3/32
+#[Peer]
+##remote pi 1 -- kitchen
+#PublicKey = clients-public-key-from-a-future-step= 
+#AllowedIPs = 10.1.1.3/32
+```
 
+Copy the `~/wg-setup/wg0.conf` file to `/etc/wireguard/wg0.conf`
+```
 $ cp wg0.conf /etc/wireguard/wg0.conf
 ```
-We'll fill out clients-public-key in an upcomming step.
+
+We'll come back and fill out clients-public-key in the `/etc/wireguard/wg0.conf` file in an upcomming step.
 
 Start Wireguard
 ```
