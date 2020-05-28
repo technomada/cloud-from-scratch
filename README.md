@@ -494,16 +494,24 @@ Why run a personal cloud.
 * Speed
 * "Unlimited" Storage
 
-### GUI/Automated Systems
-* https://cozy.io/en/
-* https://nextcloud.com/
-* https://owncloud.org/
-* https://sandstorm.io/
-
-
 ### Related Links
 
 * https://www.inkandswitch.com/local-first.html
 * https://www.reddit.com/r/selfhosted/
 * https://neustadt.fr/essays/against-a-user-hostile-web/
+
+### GUI/Automated run your own cloud systems
+* https://caprover.com/
+* https://cloudron.io/
+* https://cozy.io/en/
+* https://nextcloud.com/
+* https://owncloud.org/
+* https://sandstorm.io/
+
+### Useful services
+* https://www.backblaze.com/
+* https://ngrok.com/
+* https://www.zerotier.com/
+
+
 
