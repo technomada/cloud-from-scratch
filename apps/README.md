@@ -26,4 +26,4 @@ Get your creative juices flowing with this list of applications to install to yo
 ## More Resources
 * https://github.com/awesome-selfhosted/awesome-selfhosted
 
-Have an idea for an app to be listed here?  Make a pull request!
+Have an idea for an app to be listed here?  File an isssue or make a pull request!
