@@ -230,7 +230,7 @@ Use [CloudFlare](https://cloudflare.com) as your name server (set your domain na
 
 Configure cloudflare A record to point to the IP of your VPS.  **WITH cloudflare proxy** enabled.
 
-Configure cloudflare A record edge.example.com (replace .example.com with your domain name) point it to the IP of your VPS **WITHOUT cloudflare proxy** enabled.
+Configure cloudflare A record `edge.example.com` (replace edge`.example.com` with your domain name) point it to the IP of your VPS **WITHOUT cloudflare proxy** enabled.
 
 SSL/TLS - **Full (strict)**
  
