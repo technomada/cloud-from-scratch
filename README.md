@@ -383,9 +383,7 @@ Local nodes live within your home network.  In this system local nodes are prett
 
 Get Pi
 
-Pi (Amazon)
-
-SD Card (Amazon)
+Pi [Kit $100](https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9) This is a kit, feel free to get any Pi setup v3 or better.
 
 Install Raspbian
 Note: if you don't have a Pi, you could use a virtual machine, or laptop if so note you may need to adapt these instructions to your situation.
@@ -394,17 +392,33 @@ Download (Raspbian Buster Lite at the time of this tutorial)
 
 Create the bootable sdcard
 
-**Be careful with this step!  Be sure of your of=/dev/(yourdevhere) link.**
+**Be careful with this step!  Don't delete things you don't want to delete.  Be sure of your of=/dev/(yourdevhere) link.**
+
+These commands may help you locate your target.
+```
+$ df -h
+$ lsblk
+```
+
+Copy the raspbian zip file onto sdcard (this will erase everything on the sdcard)  dd is one option, use a disk imaging tool you're comfortable with.
 ```
 $ unzip 2020-02-13-raspbian-buster-lite.zip
 $ sudo dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevicehere) bs=4M status=progress conv=fsync
 ```
-**or** in one step
+**or** the same thing in one step
 ```
-$ sudo unzip -p 2020-02-13-raspbian-buster.zip | dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
+$ unzip -p 2020-02-13-raspbian-buster.zip | sudo dd of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
 ```
+Note `2020-02-13-raspbian-buster.zip` file name may be different for you.
 
 Enable ssh: place a file named ssh, without any extension, onto the boot partition before booting.
+
+(optionally, enable ssh)
+Open a terminal to the boot partion then...
+```
+$ touch ssh
+```
+
  
 login
 
