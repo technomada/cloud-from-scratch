@@ -1,4 +1,4 @@
-[Updated 2020.05.28]
+[ Updated 2020.05.28 ] [ Tested 2020.05.28 ] 
 
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
@@ -89,6 +89,8 @@ Any tier level with at least **512MB RAM** should be enough.
 
 Create a new instance using **Debian 10** (Buster)
 
+For the purpose of this tutoral we'll assume your edge node ip address is `198.51.100.1`.
+
 Log in via SSH to your new server
 ```
 $ ssh root@your-new-server-ip
@@ -152,7 +154,7 @@ Address = 10.1.1.1/24
 ListenPort = 51820
 PrivateKey = your-private-key-text-from-privatekey-genearation=
 
-[#iPeer]
+#[Peer]
 ##client 1 -- living room
 #PublicKey = clients-public-key-from-a-future-step=
 #AllowedIPs = 10.1.1.2/32
@@ -220,10 +222,11 @@ $ wg   ... (should show client config)
 ### Docker
 https://docs.docker.com/engine/install/debian/
 
+Install Docker
 ```
+$ apt install gnupg2 software-properties-common
 $ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-$ apt-key fingerprint 0EBFCD88
-$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+$ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 $ apt update
 $ apt install docker-ce docker-ce-cli containerd.io
 ```
@@ -242,24 +245,24 @@ Create Caddyfile
 ```
 $ vim ~/Caddyfile
 example.com:80 {
-        #tls letsencrypt@example.com
+        #tls cert@example.com
 
-        #reverse_proxy 10.1.1.2:80
-	      respond "It Works!!"
-                }
+	#reverse_proxy 10.1.1.2:80
+	
+	respond "It Works!!"
+        }
 ```
-(we'll replace example.com with your domain later in the domain step)
+(we'll replace `example.com` with your domain later in the domain step)
 
-Create a network called 'master'
+Create a docker network called `master`
 ```
 $ docker network create -d bridge master
 ```
 
-Setup Caddy file locations
+Create Caddy file locations
 ```
 $ mkdir ~/certs
-$ mkdir ~/www
-$ mkdir ~/www/example.com
+$ mkdir -p ~/www/example.com
 ```
 
 Start Caddy
@@ -267,19 +270,29 @@ Start Caddy
 $ docker run -d --restart=always --name=caddy_web_server -p 80:80 -p 443:443 --network=master -v /root/Caddyfile:/etc/caddy/Caddyfile -v /root/www:/usr/share/caddy -v /root/certs:/data caddy
 ```
 
+Check
+```
+$ docker ps -a
+```
+should see something like
+```
+eb631324c3b9        caddy               "caddy run --config …"   22 seconds ago      Up 21 seconds              0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp, 2019/tcp   caddy_web_server
+```
+
 ## Setup Domain
 ### Domain Name
 Use your own existing domain or register a new one.  | [namecheap](https://namecheap.com) -- support this project by using this affiliate link.
 	
 ### Cloudflare
-Use [CloudFlare](https://cloudflare.com) as your name server (set your domain name name servers as your cloudflare account instructs.)
+Use [CloudFlare](https://cloudflare.com) as your name server (set your domain name name servers to the nameserver names your cloudflare account instructs.)
 
-Configure cloudflare A record to point to the IP of your VPS.  **WITH cloudflare proxy** enabled.
+Configure an A record to point to the IP of your VPS.  **WITH cloudflare proxy** enabled. eg `A @ 198.51.100.1 example.com`
+(replace `example.com` with your domain name and `198.51.100.1` is an example address, use the ip address of your edge node whenever you see the `198.51.100.1` address.)
 
-Configure cloudflare A record `edge.example.com` (replace `.example.com` with your domain name eg `edge.yourdomain.com`) point it to the IP of your VPS **WITHOUT cloudflare proxy** enabled.
+Configure cloudflare a CNAME record `edge.example.com` (replace `.example.com` with your domain name eg `edge.yourdomain.com`) point it to your domain name **WITHOUT cloudflare proxy** enabled. eg `CNAME edge example.com example.com`
 
-SSL/TLS - **Full (strict)**
- 
+Set **SSL/TLS - Full (strict)** Option  (otherwise you may get too many an redirects error.)
+  
 Modify Edge Node Caddyfile
 ```
 $ vim ~/Caddyfile
