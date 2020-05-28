@@ -48,7 +48,7 @@ For this setup you'll need...
 * **Raspbery PI** (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
 * **VPS Account** (Linode/Digital Ocean/Vultr)
 
-If you're not already familiar with [Wireguard](https://www.wireguard.com/) and [Docker](https://www.docker.com/) you may want to first familiarize yourself with these as they play core roles in this project.
+If you're not already familiar with [Wireguard](https://www.wireguard.com/) and [Docker](https://www.docker.com/) you may want to first familiarize yourself with these as they play core roles in this project. These instructions assume you are comfortable with command line based installation and configuration.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
 
 
 ## Sections
@@ -78,7 +78,6 @@ If you're not already familiar with [Wireguard](https://www.wireguard.com/) and 
 * Discussion
 * Links
 
-These instructions assume you are comfortable with command line based installation and configuration, it helps if you're familiar with docker.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
 
 ## Provision Edge Node
 The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and helps mitigate NAT issues.
