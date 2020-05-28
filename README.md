@@ -510,7 +510,7 @@ Why run a personal cloud.
 
 
 ### Web GUI automated run your own cloud systems
-Prefer web gui based management?  Take a look at these.
+Prefer turnkey web gui based management?  Take a look at these.
 * https://caprover.com/
 * https://cloudron.io/
 * https://cozy.io/en/
