@@ -501,8 +501,12 @@ Why run a personal cloud.
 * https://neustadt.fr/essays/against-a-user-hostile-web/
 
 ### Similar Projects
+* https://github.com/ahmadsayed/cloud-from-scratch
 * https://github.com/progmaticltd/homebox
 * https://github.com/sovereign/sovereign
+
+* https://freedombox.org/
+
 
 ### GUI/Automated run your own cloud systems
 Perfer web gui based management?  Take a look at these.
@@ -517,6 +521,5 @@ Perfer web gui based management?  Take a look at these.
 * https://www.backblaze.com/
 * https://ngrok.com/
 * https://www.zerotier.com/
-
 
 
