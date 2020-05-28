@@ -175,25 +175,47 @@ Start Wireguard
 $ wg-quick up wg0
 ```
 
+Should see something like
+```
+[#] ip link add wg0 type wireguard
+[#] wg setconf wg0 /dev/fd/63
+[#] ip -4 address add 10.1.1.1/24 dev wg0
+[#] ip link set mtu 1420 up dev wg0
+```
+
 Verify Looks good
 ```
 $ wg
+```
+should see someting like
+```
+interface: wg0
+  public key: sf8fjDJj9fiJaawQdfiDFi8sfjkl+fxXIxf/=
+  private key: (hidden)
+  listening port: 51820
 ```
 
 Enable Wireguard to start automatically at boot
 ```
 $ systemctl enable wg-quick@wg0.service
-$ systemctl daemon-reload
-$ systemctl start wg-quick@wg0
-$ reboot ... (to check that is working)
+```
+
+Reboot to verify its working.
+```
+$ reboot
+```
+
+Verify
+```
 $ systemctl status wg-quick@wg0
 ```
 
 Test
 ```
-$ ip a ... (should show wg interface)
+$ ip a ... (should show wg0 interface)
 $ wg   ... (should show client config)
 ```
+
 
 ### Docker
 https://docs.docker.com/engine/install/debian/
