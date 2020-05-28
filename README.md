@@ -1,4 +1,4 @@
-[ Updated 2020.05.28 ] [ Tested 2020.05.28 ] 
+[ Tested 2020.05.28 ] [ Updated 2020.05.28 ] 
 
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
@@ -286,24 +286,26 @@ Use your own existing domain or register a new one.  | [namecheap](https://namec
 ### Cloudflare
 Use [CloudFlare](https://cloudflare.com) as your name server (set your domain name name servers to the nameserver names your cloudflare account instructs.)
 
-Configure an A record to point to the IP of your VPS.  **WITH cloudflare proxy** enabled. eg `A @ 198.51.100.1 example.com`
+**DNS**
+Configure an A record to point to the IP of your VPS.  **WITH cloudflare proxy** enabled. eg `A @ 198.51.100.1`
 (replace `example.com` with your domain name and `198.51.100.1` is an example address, use the ip address of your edge node whenever you see the `198.51.100.1` address.)
 
-Configure cloudflare a CNAME record `edge.example.com` (replace `.example.com` with your domain name eg `edge.yourdomain.com`) point it to your domain name **WITHOUT cloudflare proxy** enabled. eg `CNAME edge example.com example.com`
+Configure cloudflare a CNAME record `edge.example.com` (replace `.example.com` with your domain name eg `edge.yourdomain.com`) point it to your domain name **WITHOUT cloudflare proxy (click to make a grey cloud)**. eg `CNAME edge example.com`
 
-Set **SSL/TLS - Full (strict)** Option  (otherwise you may get too many an redirects error.)
+**SSL/TLS**
+Set to **Full (strict)** Option  (otherwise you may get too many an redirects error.)
   
 Modify Edge Node Caddyfile
 ```
 $ vim ~/Caddyfile
 example.com:80 {
-        tls certs@example.com
+        #tls certs@example.com
 
         #reverse_proxy 10.1.1.2:80
-	      respond "It Works!!"
+	respond "It Works!!"
                 }
 ```
-Replace `example.com` with your domain name.  Replace 'certs@example.com' with your domain's admin email address.
+Replace `example.com`s with your domain name.  Replace 'certs@example.com' with your domain's admin email address.
 
 In future references to `example.com` replace `example.com` with your domain name.
 
@@ -316,7 +318,63 @@ Check your domain
 ```
 $ curl -v http://example.com
 ```
-It should show "It Works!!"
+should see something like
+```
+> GET / HTTP/1.1
+> Host: example.com
+> User-Agent: curl/7.64.0
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Date: Thu, 28 May 2020 21:56:06 GMT
+< Content-Length: 10
+< Connection: keep-alive
+< Set-Cookie: __cfduid=d7b74165a55e4ebe027d2a259181e53731590702966; expires=Sat, 27-Jun-20 21:56:06 GMT; path=/; domain=.example.com; HttpOnly; SameSite=Lax
+< CF-Cache-Status: DYNAMIC
+< cf-request-id: 02fee21e7b0000920a16007200000001
+< Server: cloudflare
+< CF-RAY: 59ab3943faf7920a-EWR
+< 
+* Connection #0 to host adammitchell.org left intact
+It Works!!
+```
+if not, check your Caddyfile then restart caddy.
+if still not... perhaps the caddy log will help...
+```
+$ docker logs caddy_web_server
+```
+
+Enable https
+```
+$ vim Caddyfile
+```
+
+Remove `:80` and uncomment your email address.
+```
+example.com {
+        tls certs@example.com
+
+        #reverse_proxy 10.1.1.2:80
+	respond "It Works!!"
+                }
+```
+
+Restart Caddy
+```
+$ docker restart caddy_web_server
+```
+
+Make sure Certificate obtained successfully (use ctrl+c to return to term)
+```
+$ docker logs -f caddy_web_server
+```
+
+Check your domain
+```
+$ curl -v https://example.com
+```
+Should see It Works!! and TLS handshakes.
+
 
 ## Local Node
 Local nodes live within your home network.  In this system local nodes are pretty much where everything lives and happens.  Cloud systems can be built from one or more hosts, but to keep things simple we'll start out with just one node, a Raspberry Pi.
