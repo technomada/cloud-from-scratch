@@ -75,7 +75,7 @@ For this setup you'll need...
 * Discussion
 * Links
 
-These instructions assume you are comfortable with command line based installation and configuration, it helps if you're familure with docker.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
+These instructions assume you are comfortable with command line based installation and configuration, it helps if you're familiar with docker.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
 
 ## Provision Edge Node
 The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and helps mitigate NAT issues.
