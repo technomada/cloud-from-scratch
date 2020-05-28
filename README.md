@@ -419,6 +419,13 @@ Open a terminal to the boot partion then...
 $ touch ssh
 ```
 
+(optionally to find the ip address of your pi (Note: you'll need to use a keyboard and monitor if doing a wireless setup.)
+```
+$ sudo arp-scan 192.168.1.0/24 -I eth0
+```
+Assuming you have `arp-scan` installed and your nework is `192.168.1.0/24` and your pi is connected on the same network as your `eth0` connetion.
+
+
  
 login
 
@@ -428,11 +435,16 @@ login
 
 Initial Configuration
 ```
-$ sudo raspbi-config
+$ sudo raspi-config
+```
+- set password
 - set localization / keyboard
 - set wifi connection (if not using ethernet)
 - enable ssh [if not already enabled from boot ssh file]
-```
+
+If you're using ssh it's a good idea to set only key based ssh.
+
+note: once you're connected with wired or wireless you may find ssh easier to continue from here for copy/paste of commands.
 
 Update system
 ```
@@ -466,12 +478,14 @@ $ sudo apt update
 
 $ sudo apt install wireguard 
 
-$ reboot
+$ sudo reboot
 ```
 Verify
 ```
 $ which wg
 ```
+Should see something like
+`/usr/bin/wg`
 
 Generate Wireguard Keys
 ```
@@ -484,13 +498,17 @@ $ wg genkey | tee privatekey | wg pubkey > publickey
 Create wg0.conf
 ```
 $ vim wg0.conf
+```
+
+Configure, remember to replace the keys and domain name `edge.example.com` with your own.
+```
 [Interface]
 Address = 10.1.1.2/24
-PrivateKey = xxxxx-your-private-key-here-xxxxx=
+PrivateKey = your-LOCAL-NODE-private-key-goes-here=
 
 [Peer]
 Endpoint = edge.example.com:51820
-PublicKey = xxxxx-your-SERVERS-public-key-here-xxxxx=
+PublicKey = your-EDGE-NODE-public-key-goes-here=
 AllowedIPs = 10.1.1.1/32, 10.1.1.2/32, 10.1.1.0/24
 PersistentKeepalive = 25
 ```
@@ -498,39 +516,106 @@ PersistentKeepalive = 25
 IMPORTANT KEY PLACEMENTS
 Replace `edge.exmaple.com` with your `edge.yourdomain.com` setting from the cloudflare domain setting step.
 
-Copy the **PUBLIC** key of your **EDGE SERVER** to the [Peer] PublicKey Here
+You'll want to follow this closely it can get tricky...
+
+
+Copy the **PRIVATE** key of your **LOCAL NODE** to the [Interface] PrivateKey `your-LOCAL-NODE-private-key-goes-here`
+
+Copy the **PUBLIC** key of your **EDGE NODE** to the [Peer] PublicKey `your-EDGE-NODE-public-key-goes-here`
 
 Move wg0.conf to /etc/wireguard
 ```
 $ sudo mv wg0.conf /etc/wireguard
 ```
 
-Copy your **PUBLIC** key of your **LOCAL NODE** to the publickey in your EDGE NODE wg0.conf file
+
+(on **EDGE NODE**)
 ```
-(ON EDGE NODE)
 $ vim /wireguard/etc/wg0.conf
+```
+
+Copy your **PUBLIC** key of your **LOCAL NODE** to the `your-LOCAL-NODE-public-key-goes-here` in your **EDGE NODE** wg0.conf file.
+Uncomment '#' 
+```
 [Peer]
 #client 1 -- living room
-PublicKey = this-local-node-public-key-goes-here=
+PublicKey = your-LOCAL-NODE-public-key-goes-here=
 AllowedIPs = 10.1.1.2/32
 ```
-(on edge node) restart wireguard
+
+(on **EDGE NODE**) restart wireguard
 ```
 $ wg-quick down wg0
 $ wg-quick up wg0
 ```
 
-Continue on your local node... activate wg
+(on **EDGE NODE**) Check
+```
+$ wg
+```
+Should see the something like this (notice the 10.1.1.2/32 entry
+
+```
+interface: wg0
+  public key: axxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=
+  private key: (hidden)
+  listening port: 51820
+
+peer: Oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyys=
+  allowed ips: 10.1.1.2/32
+```
+
+Continue on your **LOCAL NODE**... activate wg
 ```
 $ sudo wg-quick up wg0
+```
+should see
+```
+[#] ip link add wg0 type wireguard
+[#] wg setconf wg0 /dev/fd/63
+[#] ip -4 address add 10.1.1.2/24 dev wg0
+[#] ip link set mtu 1420 up dev wg0
 ```
 
 Verify
 ```
 $ sudo wg
 ```
-Should see up and down traffic (if no down traffic verify Endpoint address.)
+Should see up and down traffic (if no down traffic verify Endpoint address. if still no, check your keys on both edge and local node wg0.conf files.)
 
+When connected..
+on the edge node `$ wg` should look something like
+```
+interface: wg0
+  public key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaa=
+  private key: (hidden)
+  listening port: 51820
+
+peer: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb=
+  endpoint: 299.12.133.4:52001
+  allowed ips: 10.1.1.2/32
+  latest handshake: 10 seconds ago
+  transfer: 180 B received, 92 B sent
+```
+
+on the local node `$ sudo wg` should look something like
+```
+interface: wg0
+  public key: ccccccccccccccccccccccccccccc=
+  private key: (hidden)
+  listening port: 52001
+
+peer: dddddddddddddddddddddddddddddddddd=
+  endpoint: 445.176.4.3:51820
+  allowed ips: 10.1.1.1/32, 10.1.1.2/32, 10.1.1.0/24
+  latest handshake: 3 seconds ago
+  transfer: 92 B received, 1.33 KiB sent
+  persistent keepalive: every 25 seconds
+
+```
+Be sure to note that the received has > 0 bytes.  It may look connected when it's not if received is 0 B.
+
+continuing on **LOCAL NODE**
 Enable Wireguard to start automatically at boot
 ```
 $ systemctl enable wg-quick@wg0.service
