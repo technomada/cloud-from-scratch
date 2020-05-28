@@ -503,6 +503,7 @@ Why run a personal cloud.
 
 ### Similar Projects
 * https://github.com/ahmadsayed/cloud-from-scratch
+* https://github.com/funkypenguin/geek-cookbook
 * https://github.com/progmaticltd/homebox
 * https://github.com/sovereign/sovereign
 * https://freedombox.org/
