@@ -50,7 +50,7 @@ For this setup you'll need...
 
 If you're not already familiar with [Wireguard](https://www.wireguard.com/) and [Docker](https://www.docker.com/) you may want to first familiarize yourself with these as they play core roles in this project. These instructions assume you are comfortable with command line based installation and configuration.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
 
-Prefer something a little more automated?  Consider one of [these](Web-GUI-automated-run-your-own-cloud-system).
+Prefer something a little more automated?  Consider one of [these](#Web-GUI-automated-run-your-own-cloud-system).
 
 ## Sections
 * **Provision Edge Node**
@@ -508,7 +508,7 @@ Why run a personal cloud.
 * https://freedombox.org/
 
 
-### Web GUI Automated run your own cloud systems
+### Web GUI automated run your own cloud systems
 Prefer web gui based management?  Take a look at these.
 * https://caprover.com/
 * https://cloudron.io/
