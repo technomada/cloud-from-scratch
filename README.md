@@ -494,6 +494,13 @@ Why run a personal cloud.
 * Speed
 * "Unlimited" Storage
 
+### GUI/Automated Systems
+* https://cozy.io/en/
+* https://nextcloud.com/
+* https://owncloud.org/
+* https://sandstorm.io/
+
+
 ### Related Links
 
 * https://www.inkandswitch.com/local-first.html
