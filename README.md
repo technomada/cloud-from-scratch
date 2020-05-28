@@ -48,6 +48,9 @@ For this setup you'll need...
 * **Raspbery PI** (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
 * **VPS Account** (Linode/Digital Ocean/Vultr)
 
+If you're not already familiar with [Wireguard](https://www.wireguard.com/) and [Docker](https://www.docker.com/) you may want to first familiarize yourself with these as they play core roles in this project.
+
+
 ## Sections
 * **Provision Edge Node**
   * VPS Instance
