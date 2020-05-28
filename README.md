@@ -375,6 +375,8 @@ $ curl -v https://example.com
 ```
 Should see It Works!! and TLS handshakes.
 
+GOOD JOB!  At this point you have a working edge node with a publicly assigned domain name ready to accept and forward web traffic to your at home local network.  Now might be a good moment to take a break and go for a little walk.  Next up... local node!
+
 
 ## Local Node
 Local nodes live within your home network.  In this system local nodes are pretty much where everything lives and happens.  Cloud systems can be built from one or more hosts, but to keep things simple we'll start out with just one node, a Raspberry Pi.
