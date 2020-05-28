@@ -65,7 +65,7 @@ For this setup you'll need...
   * Docker
   * Caddy
 
-* Example Applications
+* **Example Applications**
   * Ghost
   * GOGS
   * Express
