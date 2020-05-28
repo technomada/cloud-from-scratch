@@ -18,17 +18,19 @@ When completed the system looks something like this.
          v                            |                   v
     [Caddy Reverse Proxy]             |         +----------------------------------+
                                       |         | DOCKER                           |
-                                      |         |                                  |
-                                      |         |    [ ------ Caddy ---------]     |
-                                      |         |       |       |        |         |
-                                      |         |       v       |        v         |
-                                      |         |     [APP]     |      [APP]       |
-                                      |         |               v                  |
-                                      |         |             [APP]                |
-                                      |         |                                  |
-                                                +----------------------------------+
-                                                
-                                                
+                                      |         |				   |
+				      |		+----------------------------------+
+				      |		.				   .
+                                      |         .    [ ------ Caddy ---------]     .
+                                      |         .        |       |        |        . 
+                                      |         .        v       |        v        .
+                                      |         .       [APP]    |      [APP]      . 
+                                      |         .                v                 . 
+                                      |         .              [APP]               . 
+                                      |         .                                  . 
+                                                +. . . . . . . . . . . . . . . . . +
+                                               
+ 
          ** Internet  **                               ** Home Network Cloud **
 
 ```
@@ -172,7 +174,7 @@ https://docs.docker.com/engine/install/debian/
 ```
 $ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 $ apt-key fingerprint 0EBFCD88
-$ sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 $ apt update
 $ apt install docker-ce docker-ce-cli containerd.io
 ```
