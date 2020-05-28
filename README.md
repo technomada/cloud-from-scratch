@@ -479,7 +479,9 @@ There's plenty [more](apps/README.md) one can install, and more becomes availabl
 
 There you have it.  Your own cloud.  Let us know what you do with yours!
 
-## Disscussion
+## Troubleshooting
+
+## Discussion
 
 Why run a personal cloud.
 * Ad Free (Calmer/Cleaner/Faster)
@@ -492,7 +494,7 @@ Why run a personal cloud.
 * Speed
 * "Unlimited" Storage
 
-### Interesting Links
+### Related Links
 
 * https://www.inkandswitch.com/local-first.html
 * https://www.reddit.com/r/selfhosted/
