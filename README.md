@@ -513,7 +513,7 @@ Why run a personal cloud.
 Prefer turnkey web gui based management?  Take a look at these.
 * https://caprover.com/
 * https://cloudron.io/
-* https://cozy.io/en/
+* https://cozy.io/
 * https://nextcloud.com/
 * https://owncloud.org/
 * https://sandstorm.io/
