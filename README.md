@@ -505,6 +505,7 @@ Why run a personal cloud.
 * https://github.com/sovereign/sovereign
 
 ### GUI/Automated run your own cloud systems
+Perfer web gui based management?  Take a look at these.
 * https://caprover.com/
 * https://cloudron.io/
 * https://cozy.io/en/
