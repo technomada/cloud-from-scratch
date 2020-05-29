@@ -41,7 +41,7 @@ Chat * Photos * Calls * File Storage * Music * Notes * Weather * News * Etc
 
 You'll have your own public domain name let's call it https://example.com resolving data and apps from inside a cloud system you built from scratch running on your own home network. 
 
-Ok, Let's get started.
+Cool, let's do it!
 
 ## Requirements
 For this setup you'll need...
