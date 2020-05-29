@@ -52,7 +52,7 @@ For this setup you'll need...
 
 If you're not already familiar with [Wireguard](https://www.wireguard.com/) and [Docker](https://www.docker.com/) you may want to first familiarize yourself with these as they play core roles in this project. These instructions assume you are comfortable with command line based installation and configuration.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
 
-Prefer something a little more automated?  Consider one of [these](#web-gui-automated-run-your-own-cloud-system).
+If this sounds like your cup of tea dear reader read on. Or if you prefer something a little more automated consider one of [these](#web-gui-automated-run-your-own-cloud-system).
 
 ## Sections
 * **Provision Edge Node**
