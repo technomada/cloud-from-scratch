@@ -821,6 +821,8 @@ Why run a personal cloud.
 
 ## Where to go next
 * add TC (traffic control)
+* multiple nodes
+* advanced management
 
 ### Related Links
 
