@@ -334,7 +334,7 @@ should see something like
 < Server: cloudflare
 < CF-RAY: 59ab3943faf7920a-EWR
 < 
-* Connection #0 to host adammitchell.org left intact
+* Connection #0 to host example.com left intact
 It Works!!
 ```
 if not, check your Caddyfile then restart caddy.
@@ -733,6 +733,51 @@ SUPER!! Everything is connected!  You now have a public domain which is being se
 A cloud needs to do things, you'll be able to build your cloud into whatever suits you. Here you'll find a few examples to get you started, we'll start with a simple static file server then move on to dynamic applications.
 
 ### Caddy static file serving
+
+(note from here out you can assume we're dealing with the **LOCAL NODE**)
+
+Edit Caddyfile
+```
+$ vim ~/Caddyfile
+```
+
+Comment out the `respond` line and add `file_server` section.
+```
+http://example.com {
+	
+	file_server {
+		root /usr/share/caddy/example.com
+		}
+	#respond "Yay!  It really works!"	
+	}
+```
+
+Edit ~/www/example.com/index.html
+```
+$ vim ~/www/example.com/index.html
+```
+
+Say something witty.
+```
+Static works too!!
+```
+
+
+Restart Caddy
+```
+$ sudo docker restart caddy_web_server
+```
+
+
+Test
+```
+$ curl -v https://example.com
+```
+Try testing from your browser on your phone or desktop.
+Browse to [https://example.com]
+You should see your wit!!
+
+Fine work.  Now for something more appy.
 
 
 ### Dynamic (Sky's the limit) applications.
