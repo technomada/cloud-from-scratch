@@ -1,5 +1,7 @@
 ## Debian 10 Wireguard Edge Node Setup
 
+Location: Follow these instructions on your **EDGE NODE**
+
 ("Users with Debian releases older than Bullseye should enable backports." This includes Buster so, we'll do backport.)
 
 
