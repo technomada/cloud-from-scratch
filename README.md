@@ -117,7 +117,7 @@ Install and configure [docker](edge-node/edge-node-debian-10-docker.md) on edge 
 ### Caddy
 Caddy is super easy to use, automaticly supports Let's Encrypt https certs and will be used to route our domain requests into our home node network.
 
-Install and configure [docker](edge-node/edge-node-debian-10-caddy.md) on edge node.
+Install and configure [caddy](edge-node/edge-node-debian-10-caddy.md) on edge node.
 
 
 ## Setup Domain
