@@ -1,3 +1,8 @@
+## Install and configure Raspbian
+[2020.05.29]
+
+Location: Follow these instructions on your **LOCAL NODE**
+
 Download (Raspbian Buster Lite at the time of this tutorial)
 
 Create the bootable sdcard
