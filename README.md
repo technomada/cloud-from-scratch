@@ -823,6 +823,11 @@ Why run a personal cloud.
 * add TC (traffic control)
 * multiple nodes
 * advanced management
+	* automated application distribution
+	* system health monitoring
+	* network boot and automated dynamic provisioning
+* remote service sharing and integration
+* cloud suite
 
 ### Related Links
 
