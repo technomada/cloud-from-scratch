@@ -800,6 +800,11 @@ There's plenty [more](apps/README.md) one can install, and more becomes availabl
 There you have it.  Your own cloud.  Let us know what you do with yours!
 
 ## Troubleshooting
+Trouble? We don't need no stinkin' trouble.  Sometimes things change or there might be a misstyped command.  Here's some hints and tips to set the wrong back in line.
+
+## Doing More
+
+## Security Adjustments
 
 ## Discussion
 
@@ -813,6 +818,8 @@ Why run a personal cloud.
 * Options
 * Speed
 * "Unlimited" Storage
+
+## Where to go next
 
 ### Related Links
 
