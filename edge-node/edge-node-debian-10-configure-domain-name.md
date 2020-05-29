@@ -1,3 +1,7 @@
+## Configure your domian name on your edge node
+
+Location: Follow these instructions on your **EDGE NODE**
+
 Modify Edge Node Caddyfile
 ```
 $ vim ~/Caddyfile
