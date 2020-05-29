@@ -1,7 +1,10 @@
 
 https://docs.docker.com/engine/install/debian/
 
-Install Docker
+##Install Docker
+
+Location: Follow these instructions on your **EDGE NODE**
+
 ```
 $ apt install gnupg2 software-properties-common
 $ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
