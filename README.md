@@ -136,7 +136,7 @@ Configure cloudflare a CNAME record `edge.example.com` (replace `.example.com` w
 **SSL/TLS**
 Set to **Full (strict)** Option  (otherwise you may get too many an redirects error.)
   
-[Configure domain name](edge-node/edge-node-debian-10-configure-domain-name.md) on edge node.
+Finally we'll [configure our domain name](edge-node/edge-node-debian-10-configure-domain-name.md) on the edge node.
 
 GOOD JOB!  At this point you have a working edge node with a publicly assigned domain name ready to accept and forward web traffic to your at home local network.  Now might be a good moment to take a break and go for a little walk.  Next up... local node!
 
