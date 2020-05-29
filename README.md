@@ -105,66 +105,20 @@ $ apt upgrade
 ```
 
 ### Wireguard
-Install and configure [wireguard](edge-node/edge-node-debian-10-wireguard.md)
+We'll use wireguard to route traffic though your NAT and provide a layer of privacy to keep your home IP address private.  You can think of this kinda like a reverse VPN.
+
+Install and configure [wireguard](edge-node/edge-node-debian-10-wireguard.md) on edge node.
 
 ### Docker
-https://docs.docker.com/engine/install/debian/
+Running services in docker keeps things tidy and manageable, we'll setup docker to contain our edge services starting with a reverse proxy web server.
 
-Install Docker
-```
-$ apt install gnupg2 software-properties-common
-$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-$ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-$ apt update
-$ apt install docker-ce docker-ce-cli containerd.io
-```
-
-Test (this should download and run docker hello world image)
-```
-$ docker run hello-world  
-```
-
+Install and configure [docker](edge-node/edge-node-debian-10-docker.md) on edge node.
 
 ### Caddy
-https://hub.docker.com/_/caddy
+Caddy is super easy to use, automaticly supports Let's Encrypt https certs and will be used to route our domain requests into our home node network.
 
+Install and configure [docker](edge-node/edge-node-debian-10-caddy.md) on edge node.
 
-Create Caddyfile
-```
-$ vim ~/Caddyfile
-example.com:80 {
-        #tls cert@example.com
-
-	#reverse_proxy 10.1.1.2:80
-	
-	respond "It Works!!"
-        }
-```
-(we'll replace `example.com` with your domain later in the domain step)
-
-Create a docker network called `master`
-```
-$ docker network create -d bridge master
-```
-
-Create caddy `certs` location.
-```
-$ mkdir ~/certs
-```
-
-Start Caddy
-```
-$ docker run -d --restart=always --name=caddy_web_server -p 80:80 -p 443:443 --network=master -v /root/Caddyfile:/etc/caddy/Caddyfile  -v /root/certs:/data caddy
-```
-
-Check
-```
-$ docker ps -a
-```
-should see something like
-```
-eb631324c3b9        caddy               "caddy run --config …"   22 seconds ago      Up 21 seconds              0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp, 2019/tcp   caddy_web_server
-```
 
 ## Setup Domain
 ### Domain Name
