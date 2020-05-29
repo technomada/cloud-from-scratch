@@ -1,5 +1,8 @@
 https://hub.docker.com/_/caddy
 
+## Caddy
+
+Location: Follow these instructions on your **EDGE NODE**
 
 Create Caddyfile
 ```
