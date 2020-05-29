@@ -259,15 +259,14 @@ Create a docker network called `master`
 $ docker network create -d bridge master
 ```
 
-Create Caddy file locations
+Create caddy `certs` location.
 ```
 $ mkdir ~/certs
-$ mkdir -p ~/www/example.com
 ```
 
 Start Caddy
 ```
-$ docker run -d --restart=always --name=caddy_web_server -p 80:80 -p 443:443 --network=master -v /root/Caddyfile:/etc/caddy/Caddyfile -v /root/www:/usr/share/caddy -v /root/certs:/data caddy
+$ docker run -d --restart=always --name=caddy_web_server -p 80:80 -p 443:443 --network=master -v /root/Caddyfile:/etc/caddy/Caddyfile  -v /root/certs:/data caddy
 ```
 
 Check
@@ -618,11 +617,15 @@ Be sure to note that the received has > 0 bytes.  It may look connected when it'
 continuing on **LOCAL NODE**
 Enable Wireguard to start automatically at boot
 ```
-$ systemctl enable wg-quick@wg0.service
-$ systemctl daemon-reload
-$ systemctl start wg-quick@wg0
-$ reboot ... (to check that is working)
+$ sudo systemctl enable wg-quick@wg0.service
+```
+
+Test
+```
+$ sudo reboot
 $ systemctl status wg-quick@wg0
+$ ip a
+$ ping 10.1.1.1
 ```
 
 ### Docker
@@ -638,6 +641,7 @@ $ sudo docker info
 $ sudo docker run hello-world
 ```
 
+
 Create Network "Master"
 ```
 $ sudo docker network create -d bridge master
@@ -648,44 +652,90 @@ $ sudo docker network create -d bridge master
 ```
 $ vim ~/Caddyfile
 http://example.com {
-       respond "Yay!  It Works!"
+       respond "Yay!  It Really Works!"
        }
 ```
-(replace example.com with your domain)
+(replace `example.com` with your domain)
 
-Setup Caddy Folders
+Create caddy folders
 ```
 $ mkdir ~/certs
-$ mkdir ~/www
-$ mkdir ~/www/example.com
+$ mkdir  -p ~/www/example.com
 ```
+(replace `example.com` with your domain name)
 
-Start Caddy
+Start caddy
 ```
-$ docker run -d --restart=always --name=caddy_web_server -p 80:80 -p 443:443 --network=master -v /home/pi/Caddyfile:/etc/caddy/Caddyfile -v /home/pi/www:/usr/share/caddy -v /home/pi/certs:/data caddy
+$ sudo docker run -d --restart=always --name=caddy_web_server -p 80:80 -p 443:443 --network=master -v /home/pi/Caddyfile:/etc/caddy/Caddyfile -v /home/pi/www:/usr/share/caddy -v /home/pi/certs:/data caddy
 ```
 
 Testing
 ```
 $ sudo vim /etc/hosts
-192.168.1.2 example.com
+127.0.0.1 example.com
 ```
-.. replace `192.168.1.2` with the ip of your local node.  and `example.com` with the domain you're using.
+.. replace  `example.com` with the domain you're using.
+
 ```
 $ curl -v example.com
 ```
-You should see.. Yay!  It Works! 
+You should see.. Yay!  It Really Works! 
 
-Try globally (comment out locally host mapping)
+if no try learning more with...
+```
+$ sudo docker ps -a
+$ sudo docker logs caddy_web_server
+```
+
+Once local is working try globally
+
+on **EDGE NODE**
+```
+$ vim ~/Caddyfile
+```
+uncomment reverse proxy, comment respond
+```
+example.com {
+	tls cert@example.com
+	
+	reverse_proxy 10.1.1.2:80
+	
+	#respond "It Works!!"
+	}
+```
+
+Restart caddy
+```
+$ docker restart caddy_web_server
+```
+
+back on **LOCAL NODE**
+
+comment out test local host mapping
 ```
 $ sudo vim /etc/hosts
-#192.168.1.2 example.com
-
-$ curl -v https://example.com
+```
+```
+#127.0.0.1 example.com
 ```
 
+
+Test (note the 's' in https://)
+```
+$ curl -v https://example.com
+```
+you should see.
+`Yay!  It Really Works!!`
+
+SUPER!! Everything is connected!  You now have a public domain which is being served from a device within your local network.  Cool.  Next let get's get that node doing things.
+
 ## Applications
-Finally, a cloud needs to do things, you'll be able to build your cloud into whatever suits you. Here are a few examples to get you started.
+A cloud needs to do things, you'll be able to build your cloud into whatever suits you. Here you'll find a few examples to get you started, we'll start with a simple static file server then move on to dynamic applications.
+
+### Caddy static file serving
+
+
+### Dynamic (Sky's the limit) applications.
 
 * [Ghost](apps/ghost.md)
 * [GOGS](apps/gogs.md)
