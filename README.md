@@ -1,4 +1,4 @@
-[ Tested 2020.05.28 ] [ Updated 2020.05.29 ] 
+[ Tested 2020.05.28 ] [ Updated 2020.05.29 ] [Design Version 0.1 (Beta)]
 
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
