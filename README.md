@@ -134,7 +134,7 @@ Configure an A record to point to the IP of your VPS.  **WITH cloudflare proxy**
 Configure cloudflare a CNAME record `edge.example.com` (replace `.example.com` with your domain name eg `edge.yourdomain.com`) point it to your domain name **WITHOUT cloudflare proxy (click to make a grey cloud)**. eg `CNAME edge example.com`
 
 **SSL/TLS**
-Set to **Full (strict)** Option  (otherwise you may get too many an redirects error.)
+Set to **Full (strict)** Option  (otherwise you may get a 'too many redirects' error.)
   
 Finally we'll [configure our domain name](edge-node/edge-node-debian-10-configure-domain-name.md) on the edge node.
 
@@ -169,7 +169,7 @@ When a web request arrives at your edge node, it hits your edge node caddy insta
 Install and configure [caddy](local-node/local-node-raspbian-caddy.md) on your local node.
 
 
-SUPER!! Everything is connected!  You now have a public domain which is being served from a device within your local network.  Cool.  Next let get's get that node doing things.
+SUPER!! Everything is connected!  You now have a public domain which is being served from a device within your local network.  Cool.  Next let get that node doing things.
 
 ## Applications
 A cloud needs to do things, you'll be able to build your cloud into whatever suits you. Here you'll find a few examples to get you started, we'll start with a simple static file server then move on to dynamic applications.
