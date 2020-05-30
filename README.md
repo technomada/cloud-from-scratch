@@ -3,7 +3,7 @@
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
 
-You may be surprized to find that building and maintaining your own private cloud system, using your own equipment, hosted in your own home, is not only possible, it's relatively easy and is really fun and rewarding. The following instructions should provide everything you need to build a multi-host capable personal cloud computing platform from scratch. Using primarily off the shelf technologies and inspired by the "Arch Way" (**Simplicity, Modernity, Pragmatism, User centrality, Versatility**) this project aims to require only a small amount of technical attention and allow a wide range of expression and functionality. After completing the following steps you'll have yourself a fully functional personal private cloud system ready to be shaped into the services you wish.  I don't know about you, but I know I'm excited, so let's get started.
+You may be surprised to find that building and maintaining your own private cloud system, using your own equipment, hosted in your own home, is not only possible, it's relatively easy and is really fun and rewarding. The following instructions should provide everything you need to build a multi-host capable personal cloud computing platform from scratch. Using primarily off the shelf technologies and inspired by the "Arch Way" (**Simplicity, Modernity, Pragmatism, User centrality, Versatility**) this project aims to require only a small amount of technical attention and allow a wide range of expression and functionality. After completing the following steps you'll have yourself a fully functional personal private cloud system ready to be shaped into the services you wish.  I don't know about you, but I know I'm excited, so let's get started.
 
 
 # Overview
@@ -47,7 +47,7 @@ Cool, let's do it!
 For this setup you'll need...
 * **Cloudflare Account**
 * **Domain Name**
-* **Raspbery PI** (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
+* **Raspberry PI** (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
 * **VPS Account** (Linode/Digital Ocean/Vultr)
 
 If you're not already familiar with [Wireguard](https://www.wireguard.com/) and [Docker](https://www.docker.com/) you may want to first familiarize yourself with these as they play core roles in this project. These instructions assume you are comfortable with command line based installation and configuration.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
@@ -85,13 +85,13 @@ If this sounds like your cup of tea dear reader read on. Or if you prefer someth
 ## Provision Edge Node
 The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and helps mitigate NAT issues.
 
-Create a VPS instance at your favorate VPS service, like Digital Ocean or Vultr.  (use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr $100 free credit for 30 days](https://www.vultr.com/?ref=8580218-6G).)
+Create a VPS instance at your favorite VPS service, like Digital Ocean or Vultr.  (use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr $100 free credit for 30 days](https://www.vultr.com/?ref=8580218-6G).)
 
 Any tier level with at least **512MB RAM** should be enough.
 
 Create a new instance using **Debian 10** (Buster)
 
-For the purpose of this tutoral we'll assume your edge node ip address is `198.51.100.1`.
+For the purpose of this tutorial we'll assume your edge node ip address is `198.51.100.1`.
 
 Log in via SSH to your new server
 ```
@@ -115,7 +115,7 @@ Running services in docker keeps things tidy and manageable, we'll setup docker 
 Install and configure [docker](edge-node/edge-node-debian-10-docker.md) on edge node.
 
 ### Caddy
-Caddy is super easy to use, automaticly supports Let's Encrypt https certs and will be used to route our domain requests into our home node network.
+Caddy is super easy to use, automatically supports Let's Encrypt https certs and will be used to route our domain requests into our home node network.
 
 Install and configure [caddy](edge-node/edge-node-debian-10-caddy.md) on edge node.
 
@@ -154,12 +154,12 @@ Note: if you don't have a Pi, you could use a virtual machine, or laptop if so n
 Install and configure [raspbian](local-node/local-node-raspbian-setup.md) on your local node.
 
 ### Wireguard
-Here we'll setup the local side wireguard.  When the local node boots and gets an internet connection it will automaticallly connect to your edge node and become virtually accessable to external requests.
+Here we'll setup the local side wireguard.  When the local node boots and gets an internet connection it will automatically connect to your edge node and become virtually accessible to external requests.
 
 Install and configure [wireguard](local-node/local-node-raspbian-wireguard.md) on your local node.
 
 ### Docker
-Local node services are setup within docker containers.  Web requests are routed though caddy (running in a container) to other containerized processess but are all mapped into urls within your domain name. 
+Local node services are setup within docker containers.  Web requests are routed though caddy (running in a container) to other containerized processes but are all mapped into urls within your domain name. 
 
 Install and configure [docker](local-node/local-node-raspbian-docker.md) on your local node.
 
@@ -251,9 +251,9 @@ Sometimes things change or there might be a misstyped command.  Here are some hi
 Why run a personal cloud.
 * Ad Free (Calmer/Cleaner/Faster)
 * Control
-* Convienence
-* Persistance
-* Personaliztion
+* Convenience
+* Persistence
+* Personalization
 * Privacy
 * Options
 * Speed
