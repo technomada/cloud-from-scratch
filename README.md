@@ -39,7 +39,7 @@ From this platform you'll be able to install, own, operate and access from anywh
 
 Chat * Photos * Calls * File Storage * Music * Notes * Weather * News * Etc
 
-You'll have your own public domain name let's call it https://example.com resolving data and apps from inside a cloud system you built from scratch running on your own home network. 
+You'll have your own public domain name let's call it https://example.com resolving data and apps from inside a cloud system you built from scratch running on equipment inside your own home network. 
 
 Cool, let's do it!
 
