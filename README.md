@@ -83,7 +83,7 @@ If this sounds like your cup of tea dear reader read on. Or if you prefer someth
 
 
 ## Provision Edge Node
-The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and helps mitigate NAT issues.
+The edge node functions as a lightweight, always online, public access gateway, mainly routes traffic, provides a layer of privacy and mitigates NAT issues.
 
 Create a VPS instance at your favorite VPS service, like Digital Ocean or Vultr.  (use these affiliate links to support this project: [Digital Ocean](https://digitalocean.com) | [Vultr $100 free credit for 30 days](https://www.vultr.com/?ref=8580218-6G).)
 
