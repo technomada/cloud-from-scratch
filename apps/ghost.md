@@ -8,10 +8,9 @@ $ mkdir ~/ghost
 $ vim ~/Caddyfile
 
 https://example.com {
-        file_server {
-                root /usr/share/caddy/example.com
-                }
-
+      
+      
+        # add route
         route /blog* {
                 redir /blog /blog/
                 reverse_proxy ghost_blog:2368
