@@ -1,5 +1,5 @@
 ## Install and configure Raspbian
-[2020.05.29]
+[2020.06.03]
 
 Location: Follow these instructions on your **LOCAL NODE**
 
@@ -26,7 +26,9 @@ $ unzip -p 2020-02-13-raspbian-buster.zip | sudo dd of=/dev/(yourdevhere) bs=4M 
 ```
 Note `2020-02-13-raspbian-buster.zip` file name may be different for you.
 
-Enable ssh: place a file named ssh, without any extension, onto the boot partition before booting.
+
+### setup headless
+**Enable ssh:** place a file named ssh, without any extension, onto the boot partition before booting.
 
 (optionally, enable ssh)
 Open a terminal to the boot partion then...
@@ -34,7 +36,30 @@ Open a terminal to the boot partion then...
 $ touch ssh
 ```
 
-(optionally to find the ip address of your pi (Note: you'll need to use a keyboard and monitor if doing a wireless setup.)
+**WiFi** (hardwired ethernet recomended)
+(optionally, preconfigure wifi)
+Open a terminal to the **boot partion** then...
+
+```
+$ vim wpa_supplicant.conf
+```
+Fill in your details.. 
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=US
+
+network={
+ ssid="Name-of-your-wireless-LAN"
+ psk="Password-for-your-wireless-LAN"
+}
+```
+Be sure to change `US` to your country code.  And use your `Name-of-your-wireless-LAN` and `Password-for-your-wireless-LAN`.
+
+Move your sdcard into your pi and power it up.
+
+
+(after booting, optionally to find the ip address of your pi to access ssh, or you can use a keyboard and monitor, or your router may have a feature you'd be able to find your PI's IP address from.)
 ```
 $ sudo arp-scan 192.168.1.0/24 -I eth0
 ```
@@ -66,3 +91,6 @@ Update system
 $ sudo apt update
 $ sudo apt upgrade
 ```
+
+### helpful links
+https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
