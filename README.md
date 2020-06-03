@@ -1,4 +1,4 @@
-[ Tested 2020.05.28 ] [ Updated 2020.05.29 ] [Design Version 0.1 (Beta)]
+[ Tested 2020.05.28 ] [ Updated 2020.06.03 ] [Design Version 0.1 (Beta)]
 
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
@@ -107,17 +107,17 @@ $ apt upgrade
 ### Wireguard
 We'll use wireguard to route traffic though your NAT and provide a layer of privacy to keep your home IP address private.  You can think of this kinda like a reverse VPN.
 
-Install and configure [wireguard](edge-node/edge-node-debian-10-wireguard.md) on edge node.
+[Install and configure wireguard](edge-node/edge-node-debian-10-wireguard.md) on edge node.
 
 ### Docker
 Running services in docker keeps things tidy and manageable, we'll setup docker to contain our edge services starting with a reverse proxy web server.
 
-Install and configure [docker](edge-node/edge-node-debian-10-docker.md) on edge node.
+[Install and configure docker](edge-node/edge-node-debian-10-docker.md) on edge node.
 
 ### Caddy
 Caddy is super easy to use, automatically supports Let's Encrypt https certs and will be used to route our domain requests into our home node network.
 
-Install and configure [caddy](edge-node/edge-node-debian-10-caddy.md) on edge node.
+[Install and configure caddy](edge-node/edge-node-debian-10-caddy.md) on edge node.
 
 
 ## Setup Domain
@@ -151,22 +151,22 @@ Pi [Kit $100](https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5J
 ### Install Raspbian
 Note: if you don't have a Pi, you could use a virtual machine, or laptop if so note you may need to adapt these instructions to your situation.
 
-Install and configure [raspbian](local-node/local-node-raspbian-setup.md) on your local node.
+[Install and configure raspbian](local-node/local-node-raspbian-setup.md) on your local node.
 
 ### Wireguard
 Here we'll setup the local side wireguard.  When the local node boots and gets an internet connection it will automatically connect to your edge node and become virtually accessible to external requests.
 
-Install and configure [wireguard](local-node/local-node-raspbian-wireguard.md) on your local node.
+[Install and configure wireguard](local-node/local-node-raspbian-wireguard.md) on your local node.
 
 ### Docker
 Local node services are setup within docker containers.  Web requests are routed though caddy (running in a container) to other containerized processes but are all mapped into urls within your domain name. 
 
-Install and configure [docker](local-node/local-node-raspbian-docker.md) on your local node.
+[Install and configure docker](local-node/local-node-raspbian-docker.md) on your local node.
 
 ### Caddy 
 When a web request arrives at your edge node, it hits your edge node caddy instance, which routes the request through wireguard to your local caddy which then routes it to the docker container running the service at that url.
 
-Install and configure [caddy](local-node/local-node-raspbian-caddy.md) on your local node.
+[Install and configure caddy](local-node/local-node-raspbian-caddy.md) on your local node.
 
 
 SUPER!! Everything is connected!  You now have a public domain which is being served from a device within your local network.  Cool.  Next let get that node doing things.
