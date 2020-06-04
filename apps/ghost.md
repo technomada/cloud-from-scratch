@@ -28,3 +28,6 @@ $ sudo docker run -d --restart=always --name ghost_blog --network master -e url=
 ```
 
 Browse [https://example.com/blog/ghost/] to setup your ghost install.
+
+### related links
+https://ghost.org/faq/can-i-run-ghost-from-a-subdirectory/
