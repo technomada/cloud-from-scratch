@@ -21,6 +21,9 @@ $ sudo docker run -d --restart=always --name=caddy_web_server -p 80:80 -p 443:44
 Testing
 ```
 $ sudo vim /etc/hosts
+```
+add
+```
 127.0.0.1 example.com
 ```
 .. replace  `example.com` with the domain you're using.
