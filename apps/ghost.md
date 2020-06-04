@@ -3,7 +3,7 @@
 # Ghost
 Ghost is a free and open source blogging platform written in JavaScript and distributed under the MIT License, designed to simplify the process of online publishing for individual bloggers as well as online publications.
 
-https://hub.docker.com/_/ghost
+
 
 ```
 $ mkdir ~/ghost
@@ -30,4 +30,4 @@ $ sudo docker run -d --restart=always --name ghost_blog --network master -e url=
 Browse [https://example.com/blog/ghost/] to setup your ghost install.
 
 ### related links
-https://ghost.org/faq/can-i-run-ghost-from-a-subdirectory/
+https://hub.docker.com/_/ghost
