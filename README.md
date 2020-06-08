@@ -48,7 +48,7 @@ For this setup you'll need...
 * **Cloudflare Account**
 * **Domain Name**
 * **Raspberry PI** (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
-* **VPS Account** (Linode/Digital Ocean/Vultr)
+* **VPS Account** (Linode/Digital Ocean/Vultr/Etc)
 
 If you're not already familiar with [Wireguard](https://www.wireguard.com/) and [Docker](https://www.docker.com/) you may want to first familiarize yourself with these as they play core roles in this project. These instructions assume you are comfortable with command line based installation and configuration.  For text editing we'll use vim, feel free to replace vim with the text editor of your choice.
 
