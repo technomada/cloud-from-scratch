@@ -308,8 +308,10 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://www.backblaze.com/
 * https://github.com/sshuttle/sshuttle
 * https://grafana.com/
+* https://github.com/longhorn/longhorn
 * https://microk8s.io/
 * https://ngrok.com/
+* https://openebs.io/
 * https://prometheus.io/
 * https://traefik.io/
 * https://www.zerotier.com/
