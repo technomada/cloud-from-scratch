@@ -269,6 +269,8 @@ Why run a personal cloud.
 ## Where to go next
 * add TC (traffic control)
 * multiple nodes
+* email hosting
+* https access lan side
 * advanced management
 	* automated application distribution
 	* system health monitoring
