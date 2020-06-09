@@ -105,7 +105,7 @@ $ apt upgrade
 ```
 
 ### Wireguard
-We'll use wireguard to route traffic though your NAT and provide a layer of privacy to keep your home IP address private.  You can think of this kinda like a reverse VPN.
+We'll use wireguard to route traffic through your NAT and provide a layer of privacy to keep your home IP address private.  You can think of this kinda like a reverse VPN.
 
 [Install and configure wireguard](edge-node/edge-node-debian-10-wireguard.md) on edge node.
 
@@ -159,7 +159,7 @@ Here we'll setup the local side wireguard.  When the local node boots and gets a
 [Install and configure wireguard](local-node/local-node-raspbian-wireguard.md) on your local node.
 
 ### Docker
-Local node services are setup within docker containers.  Web requests are routed though caddy (running in a container) to other containerized processes but are all mapped into urls within your domain name. 
+Local node services are setup within docker containers.  Web requests are routed through caddy (running in a container) to other containerized processes but are all mapped into urls within your domain name. 
 
 [Install and configure docker](local-node/local-node-raspbian-docker.md) on your local node.
 
