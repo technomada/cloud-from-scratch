@@ -44,7 +44,7 @@ You'll have your own public domain name like https://bobspersonalwebsite.com res
 Cool, let's do it!
 
 ## Requirements
-For this setup you'll need...
+For this particular setup you'll need...
 * **Cloudflare Account**
 * **Domain Name**
 * **Raspberry PI** (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
