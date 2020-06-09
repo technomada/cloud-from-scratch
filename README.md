@@ -2,7 +2,7 @@
 
 Forward
 
-This project is very early in, it's mission is to maintain contemporary patterns and resources including specific instruction to create and operate personal cloud systems.  If you find a 'bug', have ideas, or have any other constructive input please contribute with a new issue or by making a pull request.  Thanks!  Let's make this a great way to build our own cloud.
+This project is very early in, it's mission is to maintain contemporary patterns and resources including specific instruction to create and operate personal cloud systems.  If you find a 'bug', have ideas, or input please contribute with a new issue or by making a pull request.  Thanks!  Let's make this a great way to build our own cloud.
 
 
 # Cloud From Scratch
