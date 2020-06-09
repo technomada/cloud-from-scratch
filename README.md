@@ -1,4 +1,4 @@
-[ Tested 2020.05.28 ] [ Updated 2020.06.03 ] [Design Version 0.1 (Beta)]
+[ Tested 2020.05.28 ] [ Updated 2020.06.03 ] [ Design Version 0.1 (Beta) ]
 
 Forward
 
