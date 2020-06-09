@@ -304,6 +304,7 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://yunohost.org/
 
 ### Useful tools and services
+* https://argoproj.github.io/projects/argo-cd
 * https://www.backblaze.com/
 * https://github.com/sshuttle/sshuttle
 * https://ngrok.com/
