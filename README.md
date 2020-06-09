@@ -1,5 +1,10 @@
 [ Tested 2020.05.28 ] [ Updated 2020.06.03 ] [Design Version 0.1 (Beta)]
 
+Forward
+
+This project is very early in, it's goal is to be a trusted source that maintains a list of contemporary patterns and tools the community can use to create and operate a personal cloud system.  If you find a 'bug', have ideas, or have any other constructive input please contribute with a new issue or by making a pull request.  Thanks!  Let's make this a great way to build our own cloud.
+
+
 # Cloud From Scratch
 Build a self-hosted personal private cloud system from scratch.
 
@@ -305,3 +310,6 @@ Prefer turnkey web gui based management?  Take a look at these.
 
 
 Have a suggestion, question, comment, or request?  Submit a [new issue](https://github.com/technomada/cloud-from-scratch/issues/new).
+
+Contact: cfs2006@textyio.com
+
