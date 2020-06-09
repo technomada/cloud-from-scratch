@@ -223,7 +223,7 @@ Browse to [https://example.com]
 
 You should see your wit!!
 
-Here you might notice too that if you enter http://example.com you'll be forward to the secure link https://example.com.
+Here you might notice too that if you enter http://example.com you'll be forwarded to the secure link https://example.com.
 
 
 Fine work.  Now for something more appy.
