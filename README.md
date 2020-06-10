@@ -318,7 +318,7 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://traefik.io/
 * https://www.zerotier.com/
 
-### How to support
+### How to support this project
 * contribute ideas/recommendations/discoveries
 * create online videos
 * share on social media
