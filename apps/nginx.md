@@ -13,13 +13,13 @@ $ cd ~/static/example.com
 
 Edit index.html
 ```
-$ vim www/index.html
+$ vim index.html
 Hello!
 ```
 
-Start Sever
+Start Server
 ```
-$ sudo docker run -d --restart=always --name nginx_example_com --network=master  -v /home/pi/static/www/example.com:/usr/share/nginx/html:ro nginx
+$ sudo docker run -d --restart=always --name nginx_example_com --network=master  -v /home/pi/static/example.com:/usr/share/nginx/html:ro nginx
 ```
 
 Map app into your domain
@@ -47,7 +47,7 @@ route /example* {
 
 Restart Caddy
 ```
-$ docker restart caddy_web_server
+$ sudo docker restart caddy_web_server
 ```
 
 browse 	[http://example.com/example]  --- Hello!
