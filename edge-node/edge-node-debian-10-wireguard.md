@@ -11,7 +11,7 @@ Edit sources.list, add buster-backports, install wireguard.
 $ vim /etc/apt/sources.list.d/sources.list
 ```
 
-add
+add the following to sources.list
 ```
 deb https://deb.debian.org/debian buster-backports main
 ```
