@@ -12,7 +12,10 @@ Get your creative juices flowing with this list of applications to install to yo
 * OpenFaaS -- https://www.openfaas.com/
 
 ## Development
+
+## Web Hosting
 * [Express](express.md)
+* [Nginx](nginx.md)
 
 ## Productivity
 * [GOGS](gogs.md) -- https://hub.docker.com/r/gogs/gogs/
