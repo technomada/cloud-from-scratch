@@ -3,7 +3,8 @@
 # Express
 A simple static file / express api based generic application setup.
 
-``
+Make example app directories
+```
 $ mkdir -p ~/app/example/www
 $ cd ~/app/example
 ```
@@ -17,6 +18,10 @@ Hello!
 Edit server.js
 ```
 $ vim server.js
+```
+
+Create simple express application
+```
 let express = require('express')
 let path = require('path')
 
@@ -45,14 +50,19 @@ Map app into your domain
 ```
 $ cd ~
 $ vim Caddyfile
+```
 
-# add this route to your domain
+Add this route to your domain
+```
 	route /example* {
 		redir /example /example/
 		uri strip_prefix /example
 		reverse_proxy example_app:3000
 		}
-    
+```
+
+Restart Caddy
+```
 $ docker restart caddy_web_server
 ```
 
