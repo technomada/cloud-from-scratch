@@ -1,10 +1,10 @@
+[ Modified 2020.06.10 ]
+
 # Express
 A simple static file / express api based generic application setup.
 
-```
-$ mkdir ~/app
-$ mkdir ~/app/example
-$ mkdir ~/app/example/www
+``
+$ mkdir -p ~/app/example/www
 $ cd ~/app/example
 ```
 
@@ -32,7 +32,6 @@ app.listen(3000,()=>{})
 
 Init app
 ```
-$ sudo docker run -it --rm -w /src -v $PWD:/src node npm init
 $ sudo docker run -it --rm -v $PWD:/usr/src/app -w /usr/src/app node npm init
 $ sudo docker run -it --rm -v $PWD:/usr/src/app -w /usr/src/app node npm i -S express
 ```
