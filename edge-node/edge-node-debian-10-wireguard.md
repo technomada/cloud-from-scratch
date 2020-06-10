@@ -5,8 +5,7 @@ Location: Follow these instructions on your **EDGE NODE**
 ("Users with Debian releases older than Bullseye should enable backports." This includes Buster so, we'll do backport.)
 
 
-Edit sources.list, add buster-backports, install wireguard.
-
+Edit sources.list
 ```
 $ vim /etc/apt/sources.list.d/sources.list
 ```
