@@ -8,7 +8,7 @@ Get your creative juices flowing with this list of applications to install to yo
 ## Development
 
 ## General Web 
-* [Express](express.md)
+* [Express](express.md) (static + api)
 * [Nginx](nginx.md)
 
 ## Productivity
