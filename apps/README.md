@@ -2,12 +2,6 @@
 
 Get your creative juices flowing with this list of applications to install to your cloud.
 
-* Cloud Management
-* Development
-* Productivty
-* Social
-* Utility
-
 ## Cloud Management
 * OpenFaaS -- https://www.openfaas.com/
 
