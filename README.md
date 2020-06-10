@@ -276,6 +276,7 @@ Why run a personal cloud.
 	* system health monitoring
 	* network boot and automated dynamic provisioning
 * remote service sharing and integration
+* firewall
 * cloud suite
 
 ### Related Links
@@ -317,6 +318,10 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://www.zerotier.com/
 
 ### How to support
+* contribute ideas/recommendations/discoveries
+* create online videos
+* share on social media
+* sponsor
 
 Have a suggestion, question, comment, or request?  Submit a [new issue](https://github.com/technomada/cloud-from-scratch/issues/new).
 
