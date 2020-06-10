@@ -50,10 +50,10 @@ Cool, let's do it!
 
 ## Requirements
 For this particular setup we'll use a...
-* **Cloudflare Account**
-* **Domain Name**
-* **Raspberry PI** (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
-* **VPS Account** (Linode/Digital Ocean/Vultr/Etc)
+* **Cloudflare Account** - Bandwidth Assistance
+* **Domain Name** - Public Address
+* **Raspberry PI** - Local Host (v3 or greater, or adopt the instructions to a PC or Virtual Machine)
+* **VPS Account** - Privacy and NAT Mitigation (Linode/Digital Ocean/Vultr/Etc)
 
 Note the requirements are needed for following the directions specifically, if you're comfortable doing something different feel free to adapt the instruction to suit your situation.  For example, depending on your drivers you may or may not feel comfortable using Cloudflare.  Some advantages of Cloudflare are privacy (hiding your actual server IP (if you proxy all the addresses,)) caching (if you expect a lot of traffic,) nice API control, and it's free.  But, you trade that for unencrypted man in the middle, certainly an understandable deal-breaker for certain situations.  If you find yourself in this situation Cloudflare can be skipped and your domain mapped directly to your edge node IP using your registrars dns panel.    
 
