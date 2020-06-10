@@ -27,5 +27,6 @@ For `generic instructions` click the url right of "--"
 
 ## More Resources
 * https://github.com/awesome-selfhosted/awesome-selfhosted
+* https://github.com/redecentralize/alternative-internet#cloud
 
 Have an idea for an app to be listed here?  File an isssue or make a pull request!
