@@ -54,11 +54,14 @@ $ vim Caddyfile
 
 Add this route to your domain
 ```
+http://example.com {
+
 	route /example* {
 		redir /example /example/
 		uri strip_prefix /example
 		reverse_proxy example_app:3000
 		}
+}
 ```
 
 Restart Caddy
