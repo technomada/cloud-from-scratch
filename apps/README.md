@@ -2,9 +2,9 @@
 
 Get your creative juices flowing with this list of applications to install to your cloud.
 
-For CFS instructions click the name left of "--"
+For CFS `specific instructions` click the name left of "--"
 
-For generic click the url right of "--"
+For `generic instructions` click the url right of "--"
 
 ## Cloud Management
 * OpenFaaS -- https://www.openfaas.com/
