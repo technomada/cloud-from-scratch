@@ -9,7 +9,7 @@ Ghost is a free and open source blogging platform written in JavaScript and dist
 $ mkdir ~/ghost
 $ vim ~/Caddyfile
 
-https://example.com {
+http://example.com {
       
       
         # add route
