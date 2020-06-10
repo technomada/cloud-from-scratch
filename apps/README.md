@@ -9,7 +9,7 @@ Get your creative juices flowing with this list of applications to install to yo
 
 ## General Web 
 * [Express](express.md) (static + api)
-* [Nginx](nginx.md)
+* [Nginx](nginx.md) -- https://hub.docker.com/_/nginx/
 
 ## Productivity
 * [GOGS](gogs.md) -- https://hub.docker.com/r/gogs/gogs/
