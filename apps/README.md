@@ -7,7 +7,7 @@ Get your creative juices flowing with this list of applications to install to yo
 
 ## Development
 
-## Web Hosting
+## General Web 
 * [Express](express.md)
 * [Nginx](nginx.md)
 
