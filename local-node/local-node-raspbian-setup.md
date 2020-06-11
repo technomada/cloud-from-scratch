@@ -22,7 +22,7 @@ $ sudo dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevicehere) bs=4M 
 ```
 **or** the same thing in one step
 ```
-$ unzip -p 2020-02-13-raspbian-buster.zip | sudo dd of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
+$ unzip -p 2020-02-13-raspbian-buster-lite.zip | sudo dd of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
 ```
 Note `2020-02-13-raspbian-buster.zip` file name may be different for you.
 
