@@ -6,7 +6,7 @@ $ which wg
 ```
 If you don't see something like `/usr/bin/wg` wg is not installed.
 
-If not try install
+Try install
 ```
 $ sudo apt install wireguard
 ```
