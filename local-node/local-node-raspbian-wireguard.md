@@ -105,7 +105,7 @@ $ wg-quick up wg0
 ```
 $ wg
 ```
-Should see the something like this (notice the 10.1.1.2/32 entry
+Should see the something like this (notice the 10.1.1.2/32 entry)
 
 ```
 interface: wg0
