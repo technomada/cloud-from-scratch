@@ -27,7 +27,7 @@ $ sudo apt install wireguard
 
 $ sudo reboot
 ```
-(If have trouble with this step see: https://github.com/technomada/cloud-from-scratch/issues/6)
+(If you have trouble with this step see: https://github.com/technomada/cloud-from-scratch/issues/6)
 
 
 Verify
