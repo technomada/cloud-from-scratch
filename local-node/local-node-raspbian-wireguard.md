@@ -26,7 +26,7 @@ $ sudo apt install wireguard
 
 $ sudo reboot
 ```
-(See: https://github.com/adrianmihalko/raspberrypiwireguard)
+(If have trouble with this step see: https://github.com/technomada/cloud-from-scratch/issues/6)
 
 
 Verify
@@ -177,3 +177,6 @@ $ systemctl status wg-quick@wg0
 $ ip a
 $ ping 10.1.1.1
 ```
+
+## Related Links
+https://github.com/adrianmihalko/raspberrypiwireguard
