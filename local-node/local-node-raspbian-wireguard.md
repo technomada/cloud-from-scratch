@@ -69,9 +69,9 @@ Replace `edge.exmaple.com` with your `edge.yourdomain.com` setting from the clou
 You'll want to follow this closely it can get tricky...
 
 
-Copy the **PRIVATE** key of your **LOCAL NODE** to the [Interface] PrivateKey `your-LOCAL-NODE-private-key-goes-here`
+Copy the **PRIVATE** key of your **LOCAL NODE** to the **[Interface]** section PrivateKey `your-LOCAL-NODE-private-key-goes-here`
 
-Copy the **PUBLIC** key of your **EDGE NODE** to the [Peer] PublicKey `your-EDGE-NODE-public-key-goes-here`
+Copy the **PUBLIC** key of your **EDGE NODE** to the **[Peer]** section PublicKey `your-EDGE-NODE-public-key-goes-here`
 
 Move wg0.conf to /etc/wireguard
 ```
