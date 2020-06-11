@@ -4,6 +4,7 @@ Check if already installed
 ```
 $ which wg
 ```
+If you don't see something like `/usr/bin/wg` wg is not installed.
 
 If not try install
 ```
