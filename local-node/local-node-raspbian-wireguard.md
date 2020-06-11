@@ -73,7 +73,7 @@ Copy the **PRIVATE** key of your **LOCAL NODE** to the **[Interface]** section P
 
 Copy the **PUBLIC** key of your **EDGE NODE** to the **[Peer]** section PublicKey `your-EDGE-NODE-public-key-goes-here`
 
-This is a point if you don't get these details exactly right (easy to do) things will not work for what will seem like no reason. 
+This is a point if you don't get these details exactly right (easy to do) things will not work for what will seem like no reason. If your connection doesn't work on first try, the wireguard keys, addresses and ports are where you want to come back and check closely.
 
 Move wg0.conf to /etc/wireguard
 ```
