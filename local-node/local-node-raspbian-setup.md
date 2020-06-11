@@ -1,5 +1,5 @@
 ## Install and configure Raspbian
-[2020.06.03]
+[ updated 2020.06.10 ]
 
 Location: Follow these instructions on your **LOCAL NODE**
 
