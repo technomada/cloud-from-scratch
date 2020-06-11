@@ -1,4 +1,4 @@
-See: https://github.com/adrianmihalko/raspberrypiwireguard
+
 
 Check if already installed
 ```
@@ -26,6 +26,9 @@ $ sudo apt install wireguard
 
 $ sudo reboot
 ```
+(See: https://github.com/adrianmihalko/raspberrypiwireguard)
+
+
 Verify
 ```
 $ which wg
