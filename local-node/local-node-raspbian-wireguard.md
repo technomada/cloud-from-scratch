@@ -73,6 +73,8 @@ Copy the **PRIVATE** key of your **LOCAL NODE** to the **[Interface]** section P
 
 Copy the **PUBLIC** key of your **EDGE NODE** to the **[Peer]** section PublicKey `your-EDGE-NODE-public-key-goes-here`
 
+This is a point if you don't get these details exactly right (easy to do) things will not work for what will seem like no reason. 
+
 Move wg0.conf to /etc/wireguard
 ```
 $ sudo mv wg0.conf /etc/wireguard
