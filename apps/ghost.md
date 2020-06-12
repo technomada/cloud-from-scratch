@@ -29,6 +29,12 @@ $ sudo docker restart caddy_web_server
 $ sudo docker run -d --restart=always --name ghost_blog --network master -e url=http://example.com/blog/ -v /home/pi/ghost:/var/lib/ghost/content ghost
 ```
 
+Check that it's working
+```
+$ sudo docker logs -f ghost_blog
+```
+ctrl+c to return to term
+
 Browse [https://example.com/blog/ghost/] to setup your ghost install.
 
 ### related links
