@@ -80,3 +80,6 @@ $ curl -v https://example.com
 ```
 you should see.
 `Yay!  It Really Works!!`
+
+### Testing
+If you don't see what you expect you can debug by reactivating the respond section (and deactivating the reverse_proxy) of the Caddyfile on the local node or remote node and restarting caddy and use your hosts file to bypass Cloudflare.  You can also test wireguard connections with wg and pinging. 
