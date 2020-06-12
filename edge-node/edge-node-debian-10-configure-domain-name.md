@@ -2,25 +2,6 @@
 
 Location: Follow these instructions on your **EDGE NODE**
 
-Modify Edge Node Caddyfile
-```
-$ vim ~/Caddyfile
-example.com:80 {
-        #tls certs@example.com
-
-        #reverse_proxy 10.1.1.2:80
-	respond "It Works!!"
-                }
-```
-Replace `example.com`s with your domain name.  Replace 'certs@example.com' with your domain's admin email address.
-
-In future references to `example.com` replace `example.com` with your domain name.
-
-Restart Caddy
-```
-$ docker restart caddy_web_server
-```
-
 Check your domain
 ```
 $ curl -v http://example.com
