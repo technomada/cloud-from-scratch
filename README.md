@@ -176,7 +176,7 @@ When a web request arrives at your edge node, it hits your edge node caddy insta
 [Install and configure caddy](local-node/local-node-raspbian-caddy.md) on your local node.
 
 
-SUPER!! Everything is connected!  You now have a public domain which is being served from a device within your local network.  Cool.  Next let get that node doing things.
+SUPER!! Everything is connected!  You now have a publicly addressable domain name which serving content from a device within your local network.  Cool.  Next let get that node doing things.
 
 ## Applications
 A cloud needs to do things, you'll be able to build your cloud into whatever suits you. Here you'll find a few examples to get you started, we'll start with a simple static file server then move on to dynamic applications.
