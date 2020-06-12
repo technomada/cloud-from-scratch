@@ -12,6 +12,8 @@ $ cd ~/app/example
 Edit index.html
 ```
 $ vim www/index.html
+```
+```
 Hello!
 ```
 
