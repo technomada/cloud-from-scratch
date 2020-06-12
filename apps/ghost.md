@@ -8,7 +8,8 @@ Ghost is a free and open source blogging platform written in JavaScript and dist
 ```
 $ mkdir ~/ghost
 $ vim ~/Caddyfile
-
+```
+```
 http://example.com {
       
       
@@ -18,7 +19,8 @@ http://example.com {
                 reverse_proxy ghost_blog:2368
                 }
         }
-        
+```
+```
 $ docker restart caddy_web_server
 ```
 (replace example.com with your domain)
