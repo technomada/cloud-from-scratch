@@ -35,7 +35,7 @@ $ curl -v example.com
 ```
 You should see.. Yay!  It Really Works! 
 
-if no try learning more with...
+if no, try learning more with...
 ```
 $ sudo docker ps -a
 $ sudo docker logs caddy_web_server
