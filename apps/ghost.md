@@ -21,7 +21,7 @@ http://example.com {
         }
 ```
 ```
-$ docker restart caddy_web_server
+$ sudo docker restart caddy_web_server
 ```
 (replace example.com with your domain)
 
