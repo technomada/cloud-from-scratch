@@ -1,4 +1,4 @@
-## Local node raspbian caddy
+## Local node Raspbian Caddy
 
 ```
 $ vim ~/Caddyfile
@@ -11,7 +11,7 @@ http://example.com {
 Create caddy folders
 ```
 $ mkdir ~/certs
-$ mkdir  -p ~/www/example.com
+$ mkdir -p ~/www/example.com
 ```
 (replace `example.com` with your domain name)
 
