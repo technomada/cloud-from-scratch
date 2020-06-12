@@ -27,7 +27,8 @@ $ sudo apt install wireguard
 
 $ sudo reboot
 ```
-(If you have trouble with this step see: https://github.com/technomada/cloud-from-scratch/issues/6)
+If you see a 404 or have trouble with this step see: https://github.com/adrianmihalko/raspberrypiwireguard and https://github.com/technomada/cloud-from-scratch/issues/6
+
 
 
 Verify
