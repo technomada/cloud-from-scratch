@@ -6,7 +6,9 @@ Check your domain
 ```
 $ curl -v http://example.com
 ```
-should see something like
+(replacing `example.com` with your domain name)
+
+you should see something like
 ```
 > GET / HTTP/1.1
 > Host: example.com
