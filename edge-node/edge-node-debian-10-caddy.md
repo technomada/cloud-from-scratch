@@ -15,7 +15,7 @@ example.com:80 {
 	respond "It Works!!"
         }
 ```
-(we'll replace `example.com` with your domain later in the domain step)
+(Replace `example.com` with your domain name)
 
 Create a docker network called `master`
 ```
