@@ -32,5 +32,4 @@ $ sudo docker run -d --restart=always --name ghost_blog --network master -e url=
 Browse [https://example.com/blog/ghost/] to setup your ghost install.
 
 ### related links
-https://hub.docker.com/_/ghost
-https://ghost.org/docs/concepts/config/
+https://hub.docker.com/_/ghost | https://ghost.org/docs/concepts/config/
