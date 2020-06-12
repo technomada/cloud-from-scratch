@@ -81,6 +81,7 @@ Should see something like
 [#] ip -4 address add 10.1.1.1/24 dev wg0
 [#] ip link set mtu 1420 up dev wg0
 ```
+If you see something like `Protocol not supported` make sure you've rebooted.
 
 Verify Looks good
 ```
