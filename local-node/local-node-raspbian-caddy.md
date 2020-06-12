@@ -82,4 +82,27 @@ you should see.
 `Yay!  It Really Works!!`
 
 ### Testing
-If you don't see what you expect you can debug by reactivating the respond section (and deactivating the reverse_proxy) of the Caddyfile on the local node or remote node and restarting caddy and use your hosts file to bypass Cloudflare.  You can also test wireguard connections with wg and pinging. 
+If you don't see what you expect you can debug by reactivating the respond section (and deactivating the reverse_proxy) of the Caddyfile on the local node or remote node and restarting caddy and use your hosts file to bypass Cloudflare.  You can also test wireguard connections with wg and pinging.
+
+The edge server should be able to ping the local node and the local node should be able to ping the edge server.
+
+eg
+```
+root@edge:~# ping 10.1.1.2
+
+PING 10.1.1.2 (10.1.1.2) 56(84) bytes of data.
+64 bytes from 10.1.1.2: icmp_seq=1 ttl=64 time=107 ms
+64 bytes from 10.1.1.2: icmp_seq=2 ttl=64 time=63.1 ms
+64 bytes from 10.1.1.2: icmp_seq=3 ttl=64 time=62.8 ms
+64 bytes from 10.1.1.2: icmp_seq=4 ttl=64 time=69.8 ms
+```
+
+```
+pi@raspberrypi:~ $ ping 10.1.1.1
+
+PING 10.1.1.1 (10.1.1.1) 56(84) bytes of data.
+64 bytes from 10.1.1.1: icmp_seq=1 ttl=64 time=62.5 ms
+64 bytes from 10.1.1.1: icmp_seq=2 ttl=64 time=79.5 ms
+64 bytes from 10.1.1.1: icmp_seq=3 ttl=64 time=63.1 ms
+64 bytes from 10.1.1.1: icmp_seq=4 ttl=64 time=65.8 ms
+```
