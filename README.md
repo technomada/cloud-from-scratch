@@ -279,6 +279,7 @@ Why run a personal cloud.
 * firewall
 * cloud suite
 
+
 ### Related Links
 
 * https://www.inkandswitch.com/local-first.html
@@ -294,6 +295,8 @@ Why run a personal cloud.
 * https://github.com/sovereign/sovereign
 * https://freedombox.org/
 
+### Additional Reading
+https://medium.com/better-programming/running-a-container-with-a-non-root-user-e35830d1f42a
 
 ### Web GUI automated run your own cloud systems
 Prefer turnkey web gui based management?  Take a look at these.
