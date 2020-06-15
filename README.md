@@ -324,7 +324,7 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://www.zerotier.com/
 
 ### How to support this project
-* contribute ideas/recommendations/discoveries
+* contribute feedback/ideas/recommendations/discoveries
 * report issues (this project contains moving targets)
 * create online videos
 * share on social media
