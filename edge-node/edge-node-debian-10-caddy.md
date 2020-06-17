@@ -17,11 +17,6 @@ example.com:80 {
 ```
 (Replace `example.com` with your domain name)
 
-Create a docker network called `master`
-```
-$ docker network create -d bridge master
-```
-
 Create caddy `certs` location.
 ```
 $ mkdir ~/certs
