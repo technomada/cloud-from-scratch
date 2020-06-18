@@ -281,7 +281,7 @@ Why run a personal cloud.
 
 
 ### Related Links
-
+* https://github.com/cncf/landscape#trail-map
 * https://www.inkandswitch.com/local-first.html
 * https://www.reddit.com/r/selfhosted/
 * https://neustadt.fr/essays/against-a-user-hostile-web/
