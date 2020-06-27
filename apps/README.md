@@ -21,6 +21,7 @@ For `generic instructions` click the url right of "--"
 ## Social
 * [Ghost](ghost.md) -- https://hub.docker.com/_/ghost
 * Wordpress -- https://hub.docker.com/_/wordpress/
+* Discourse -- https://hub.docker.com/r/bitnami/discourse/
 
 ## Utility
 * OpenMap [no arm] - https://openmaptiles.com/server/
