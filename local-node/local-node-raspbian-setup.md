@@ -3,7 +3,7 @@
 
 Location: Follow these instructions on your **LOCAL NODE**
 
-Download (Raspbian Buster Lite at the time of this tutorial)
+Download the pi os iso.  (2020-05-27-raspios-buster-lite-armhf.zip at the time of this tutorial)
 
 Create the bootable sdcard
 
