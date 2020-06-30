@@ -282,9 +282,7 @@ Why run a personal cloud.
 
 ### Related Links
 * https://github.com/cncf/landscape#trail-map
-* https://www.inkandswitch.com/local-first.html
 * https://www.reddit.com/r/selfhosted/
-* https://neustadt.fr/essays/against-a-user-hostile-web/
 * https://redecentralize.org/
 
 ### Similar Projects
@@ -297,6 +295,9 @@ Why run a personal cloud.
 
 ### Additional Reading
 * https://medium.com/better-programming/running-a-container-with-a-non-root-user-e35830d1f42a
+* https://neustadt.fr/essays/against-a-user-hostile-web/
+* https://www.howtoforge.com/tutorial/build-your-own-cloud-on-debian-wheezy/
+* https://www.inkandswitch.com/local-first.html
 
 ### Web GUI automated run your own cloud systems
 Prefer turnkey web gui based management?  Take a look at these.
