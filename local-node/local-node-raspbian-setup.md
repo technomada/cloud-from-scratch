@@ -78,7 +78,7 @@ $ sudo raspi-config
 ```
 - set password
 - set localization / keyboard
-- set wifi connection (if not using ethernet)
+- set wifi connection (if not using ethernet and not already set)
 - enable ssh [if not already enabled from boot ssh file]
 
 If you're using ssh it's a good idea to set only key based ssh.
