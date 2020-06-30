@@ -284,6 +284,7 @@ Why run a personal cloud.
 * https://github.com/cncf/landscape#trail-map
 * https://www.reddit.com/r/selfhosted/
 * https://redecentralize.org/
+* https://www.cncf.io/projects/
 
 ### Similar Projects
 * https://github.com/ahmadsayed/cloud-from-scratch
@@ -298,6 +299,8 @@ Why run a personal cloud.
 * https://neustadt.fr/essays/against-a-user-hostile-web/
 * https://www.howtoforge.com/tutorial/build-your-own-cloud-on-debian-wheezy/
 * https://www.inkandswitch.com/local-first.html
+* https://www.rechberger.io/tutorial-how-to-build-your-own-server-infrastructure-using-ansible/
+
 
 ### Web GUI automated run your own cloud systems
 Prefer turnkey web gui based management?  Take a look at these.
@@ -311,6 +314,7 @@ Prefer turnkey web gui based management?  Take a look at these.
 
 ### Useful tools and services
 * https://argoproj.github.io/projects/argo-cd
+* https://www.ansible.com/overview/how-ansible-works
 * https://www.backblaze.com/
 * https://github.com/sshuttle/sshuttle
 * https://grafana.com/
