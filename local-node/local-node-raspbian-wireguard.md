@@ -1,4 +1,4 @@
-[ updated 2020.06.10 ]
+[ updated 2020.06.30 ]
 
 Check if already installed
 ```
@@ -168,8 +168,7 @@ peer: dddddddddddddddddddddddddddddddddd=
 ```
 Be sure to note that the received has > 0 bytes.  It may look connected when it's not if received is 0 B.
 
-continuing on **LOCAL NODE**
-Enable Wireguard to start automatically at boot
+continuing on **LOCAL NODE** enable wireguard to start automatically at boot
 ```
 $ sudo systemctl enable wg-quick@wg0.service
 ```
