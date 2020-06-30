@@ -66,7 +66,7 @@ Assuming you have `arp-scan` installed and your nework is `192.168.1.0/24` and y
 
 
  
-login
+login with ssh `$ ssh pi@192.168.1.20` (your ip may be different) or with keybord and monitor.
 
 **user** pi
 
