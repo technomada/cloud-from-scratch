@@ -15,7 +15,7 @@ $ df -h
 $ lsblk
 ```
 
-Copy the raspbian zip file onto sdcard (this will erase everything on the sdcard)  dd is one option, use a disk imaging tool you're comfortable with.
+Copy the os image to sdcard (this will erase everything on the sdcard)  dd is one option, use a disk imaging tool you're comfortable with.
 ```
 $ unzip 2020-02-13-raspbian-buster-lite.zip
 $ sudo dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevicehere) bs=4M status=progress conv=fsync
