@@ -27,7 +27,7 @@ $ unzip -p 2020-02-13-raspbian-buster-lite.zip | sudo dd of=/dev/(yourdevhere) b
 
 
 ### setup headless
-**Enable ssh:** place a file named ssh, without any extension, onto the boot partition before booting.
+**Enable ssh:** place a file named ssh, without any extension, onto the **boot partition** before booting.
 
 (optionally, enable ssh)
 Open a terminal to the boot partion then...
