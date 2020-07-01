@@ -40,4 +40,5 @@ Browse [ https://example.com/blog/ghost/ ] to setup your ghost install.
 Visit [ https://example.com/blog/ ] to visit your blog.
 
 ### related links
-https://hub.docker.com/_/ghost | https://ghost.org/docs/concepts/config/
+* https://hub.docker.com/_/ghost | https://ghost.org/docs/concepts/config/
+* https://github.com/docker-library/ghost/issues/120 --- email config
