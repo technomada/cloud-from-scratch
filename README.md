@@ -234,7 +234,7 @@ Here you might notice too that if you enter http://example.com you'll be forward
 Fine work.  Now for something more appy.
 
 
-### Dynamic (Sky's the limit) applications.
+### Dynamic (sky's the limit) applications.
 
 Here's few apps setups to try, click one of these or jump to the [more](apps/README.md) page for expanded lists.
 
