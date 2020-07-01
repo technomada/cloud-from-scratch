@@ -92,4 +92,5 @@ $ sudo apt upgrade
 ```
 
 ### helpful links
-https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
+* https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
+* https://raspberrytips.com/disable-wifi-raspberry-pi/#4_Config_txt
