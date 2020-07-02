@@ -116,7 +116,9 @@ note: older versions of raspbian you may need to use pi3-disable-wifi and pi3-di
 reboot and check that wifi is not available
 ```
 $ sudo reboot
+$ ip a
 ```
+No wireless device should be listed.
 
 ### helpful links
 * https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
