@@ -94,7 +94,7 @@ $ sudo apt upgrade
 ## Optional Steps
 
 ### Disable radio coms
-(be sure you're connected with ethernet first)
+(be sure you're connected with cabled ethernet first)
 
 Edit /boot/config.txt
 
