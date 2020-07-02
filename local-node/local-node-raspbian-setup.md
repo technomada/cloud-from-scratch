@@ -91,6 +91,31 @@ $ sudo apt update
 $ sudo apt upgrade
 ```
 
+### optional
+Disable radio coms (be sure you're connected with ethernet first)
+
+Edit /boot/config.txt
+
+```
+$ sudo vim /boot/config.txt
+```
+
+Locate this line
+```
+# Additional overlays and parameters are documented /boot/overlays/README
+```
+insert
+```
+dtoverlay=disable-wifi
+dtoverlay=disable-bt
+```
+note: older versions of raspbian you may need to use pi3-disable-wifi and pi3-disable-bt instead of the non prefixed versions.
+
+reboot and check that wifi is not available
+```
+$ sudo reboot
+```
+
 ### helpful links
 * https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
 * https://raspberrytips.com/disable-wifi-raspberry-pi/#4_Config_txt
