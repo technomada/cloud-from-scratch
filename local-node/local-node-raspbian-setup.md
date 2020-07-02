@@ -91,8 +91,10 @@ $ sudo apt update
 $ sudo apt upgrade
 ```
 
-### optional
-Disable radio coms (be sure you're connected with ethernet first)
+## Optional Steps
+
+### Disable radio coms
+(be sure you're connected with ethernet first)
 
 Edit /boot/config.txt
 
