@@ -62,6 +62,10 @@ Restart caddy
 ```
 $ docker restart caddy_web_server
 ```
+or better...
+```
+$ docker exec -it caddy_web_server caddy reload --config /etc/caddy/Caddyfile
+```
 
 back on **LOCAL NODE**
 
