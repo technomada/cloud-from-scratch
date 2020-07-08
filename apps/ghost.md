@@ -20,8 +20,10 @@ http://example.com {
                 }
         }
 ```
+
+Reload caddy config
 ```
-$ sudo docker restart caddy_web_server
+$ sudo docker exec -it caddy_web_server caddy reload --config /etc/caddy/Caddyfile
 ```
 (replace example.com with your domain)
 
