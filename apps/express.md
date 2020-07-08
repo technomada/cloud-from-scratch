@@ -66,9 +66,9 @@ http://example.com {
 }
 ```
 
-Restart Caddy
+Reload Caddy config
 ```
-$ sudo docker restart caddy_web_server
+$ sudo docker exec caddy_web_server caddy reload --config /etc/caddy/Caddyfile
 ```
 
 browse 	[http://example.com/example]  --- Hello!
