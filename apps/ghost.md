@@ -23,7 +23,7 @@ http://example.com {
 
 Reload caddy config
 ```
-$ sudo docker exec -it caddy_web_server caddy reload --config /etc/caddy/Caddyfile
+$ sudo docker exec caddy_web_server caddy reload --config /etc/caddy/Caddyfile
 ```
 (replace example.com with your domain)
 
