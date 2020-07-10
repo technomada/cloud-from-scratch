@@ -323,6 +323,7 @@ Prefer turnkey web gui based management?  Take a look at these.
 * http://play-with-docker.com/
 * https://ngrok.com/
 * https://openebs.io/
+* https://www.openfaas.com/
 * https://www.portainer.io/
 * https://prometheus.io/
 * https://traefik.io/
