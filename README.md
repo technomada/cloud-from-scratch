@@ -320,6 +320,7 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://grafana.com/
 * https://github.com/longhorn/longhorn
 * https://landscape.cncf.io/
+* https://localhost.run/
 * https://microk8s.io/
 * http://play-with-docker.com/
 * https://ngrok.com/
