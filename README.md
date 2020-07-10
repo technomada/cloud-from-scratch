@@ -328,6 +328,11 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://traefik.io/
 * https://www.zerotier.com/
 
+
+### Related tech to consider
+* https://docs.inlets.dev/
+* https://github.com/lithdew/flatend
+
 ### How to support this project
 * contribute feedback/ideas/recommendations/discoveries
 * report issues (this project contains moving targets)
