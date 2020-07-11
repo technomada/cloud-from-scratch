@@ -183,3 +183,10 @@ $ ping 10.1.1.1
 
 ## Related Links
 https://github.com/adrianmihalko/raspberrypiwireguard
+
+## Optional
+Share config by QR code
+```
+$ qrencode -t ansiutf8 -t png -r wg0.conf -o wg0.png
+(might need to $ apt install qrencode)
+```
