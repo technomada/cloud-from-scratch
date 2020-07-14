@@ -27,6 +27,7 @@ For `generic instructions` click the url right of "--"
 * OpenMap [no arm] - https://openmaptiles.com/server/
 
 ## More Resources
+* https://awesomeopensource.com/projects/cloud
 * https://github.com/awesome-selfhosted/awesome-selfhosted
 * https://github.com/redecentralize/alternative-internet#cloud
 
