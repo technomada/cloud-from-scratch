@@ -250,6 +250,7 @@ There you have it.  Your own cloud.  Let us know what you do with yours!
 Sometimes things change or there might be a misstyped command.  Here are some hints and tips to get the wrong back in line.
 
 ## Doing More
+* [Using subdomains]more/subdomains.md
 
 ## Security Adjustments
 
