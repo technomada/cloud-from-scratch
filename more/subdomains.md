@@ -30,7 +30,9 @@ nextcloud.domain.com:80 {
 
 Restart caddy on your edge and local nodes.
 
-note: Caddy supports dynamic "on_demand" sub domain certs.. like this...
+
+### Optional
+Caddy supports dynamic "on_demand" sub domain certs.. like this...
 ```
 *.example.com {
 	tls cert@example.com {
