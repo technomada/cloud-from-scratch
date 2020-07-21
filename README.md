@@ -344,9 +344,7 @@ Prefer turnkey web gui based management?  Take a look at these.
 * share on social media
 * sponsor
 
-Have a suggestion, question, comment, or request?  Would like to see instructions for a particular topic?
-
-Submit a [new issue](https://github.com/technomada/cloud-from-scratch/issues/new).
+Have a suggestion, question, comment, or request?  Would like to see instructions for a particular topic? Submit a [NEW ISSUE](https://github.com/technomada/cloud-from-scratch/issues/new).
 
 Contact: cfs2006@textyio.com
 
