@@ -30,5 +30,7 @@ For `generic instructions` click the url right of "--"
 * https://awesomeopensource.com/projects/cloud
 * https://github.com/awesome-selfhosted/awesome-selfhosted
 * https://github.com/redecentralize/alternative-internet#cloud
+* https://www.linuxserver.io/
+
 
 Have an idea for an app to be listed here?  File an isssue or make a pull request!
