@@ -1,7 +1,7 @@
 ## Using Subdomains
 
 
-Assuming you're running a docker container called nextcloud, and want to map https://nextcloud.example.com into it...
+Assuming you're running a docker container called nextcloud on your local node and want to map https://nextcloud.example.com into it...
 
 On your **EDGE NODE**
 
