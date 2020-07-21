@@ -30,8 +30,8 @@ Restart caddy on your edge and local nodes.
 
 note: Caddy supports dynamic "on_demand" sub domain certs.. like this...
 ```
-*.domain.com {
-	tls cert@domain.com {
+*.example.com {
+	tls cert@example.com {
 		on_demand
 		}
 	}
