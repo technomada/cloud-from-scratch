@@ -1,4 +1,4 @@
-[next: test this]
+[next: test]
 
 ## Using Subdomains
 
