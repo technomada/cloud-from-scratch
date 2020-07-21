@@ -22,7 +22,7 @@ On your **LOCAL NODE**
 
 Edit Caddyfile
 ```
-nextcloud.domain.com:80 {
+nextcloud.example.com:80 {
 
 	reverse_proxy nextcloud:80
 	}
