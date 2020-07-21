@@ -1,15 +1,24 @@
 ## Using Subdomains
 
-In Edge Node
-```
-nextcloud.domain.com {
-	tls cert@domain.com
 
-	reverse_proxy 10.10.10.2:80
+Assuming you're running a docker container called nextcloud, and want to map https://nextcloud.example.com into it...
+
+On your **EDGE NODE**
+
+Edit Caddyfile
+```
+$ vim ~/Caddyfile
+
+nextcloud.example.com {
+	tls cert@example.com
+
+	reverse_proxy 10.1.1.2:80
 	}
 ```
 
-In Local Node
+On your **LOCAL NODE**
+
+Edit Caddyfile
 ```
 nextcloud.domain.com:80 {
 
@@ -17,7 +26,9 @@ nextcloud.domain.com:80 {
 	}
 ```
 
-note: Caddy supports dynamic "on_demand" sub domian certs.. like this...
+Restart caddy on your edge and local nodes.
+
+note: Caddy supports dynamic "on_demand" sub domain certs.. like this...
 ```
 *.domain.com {
 	tls cert@domain.com {
