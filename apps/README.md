@@ -33,6 +33,8 @@ For `generic instructions` click the url right of "--"
 * https://github.com/redecentralize/alternative-internet#cloud
 * https://www.linuxserver.io/ (https://docs.linuxserver.io/)
 
+* https://en.wikipedia.org/wiki/List_of_free_and_open-source_web_applications
+
 
 
 
