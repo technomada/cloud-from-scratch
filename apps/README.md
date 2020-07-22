@@ -28,9 +28,12 @@ For `generic instructions` click the url right of "--"
 
 ## More Resources
 * https://awesomeopensource.com/projects/cloud
+* https://bitnami.com/stacks/containers
 * https://github.com/awesome-selfhosted/awesome-selfhosted
 * https://github.com/redecentralize/alternative-internet#cloud
 * https://www.linuxserver.io/ (https://docs.linuxserver.io/)
+
+
 
 
 Have an idea for an app to be listed here?  File an isssue or make a pull request!
