@@ -31,6 +31,7 @@ For `generic instructions` click the url right of "--"
 * https://bitnami.com/stacks/containers
 * https://github.com/awesome-selfhosted/awesome-selfhosted
 * https://github.com/redecentralize/alternative-internet#cloud
+* https://github.com/unicodeveloper/awesome-opensource-apps
 * https://www.linuxserver.io/ (https://docs.linuxserver.io/)
 
 ## Also Consider
