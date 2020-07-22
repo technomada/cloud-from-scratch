@@ -337,6 +337,9 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://docs.inlets.dev/
 * https://github.com/lithdew/flatend
 
+### About the technology
+* https://github.com/pirate/wireguard-docs
+
 ### How to support this project
 * contribute feedback/ideas/recommendations/discoveries
 * report issues (this project contains moving targets)
