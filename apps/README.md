@@ -34,6 +34,7 @@ For `generic instructions` click the url right of "--"
 * https://www.linuxserver.io/ (https://docs.linuxserver.io/)
 
 ## Also Consider
+* https://awesomeopensource.com/projects/web-application
 * https://en.wikipedia.org/wiki/List_of_free_and_open-source_web_applications
 * https://github.com/unicodeveloper/awesome-opensource-apps
 
