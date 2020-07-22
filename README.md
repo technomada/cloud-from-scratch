@@ -343,6 +343,7 @@ Prefer turnkey web gui based management?  Take a look at these.
 ### About Cloud From Scratch technology
 The cloud from scratch project favors using established technologies over building new tech.
 * Easier to adopt
+* Familiarity
 * If something exists that works, don't build something new
 * Longevity
 * Leverage billions of dollars worth of existing energy
