@@ -256,7 +256,9 @@ Sometimes things change or there might be a misstyped command.  Here are some hi
 
 ## Discussion
 
-Why run a personal cloud.
+Why run a personal cloud? 
+**It's better to own your platform.**
+
 * Ad Free (Calmer/Cleaner/Faster)
 * Control
 * Convenience
@@ -337,7 +339,17 @@ Prefer turnkey web gui based management?  Take a look at these.
 * https://docs.inlets.dev/
 * https://github.com/lithdew/flatend
 
-### About the technology
+### About Cloud From Scratch technology
+The cloud from scratch project favors established technologies over building new tech.
+* Easier to adopt
+* If something exists that works, don't build something new
+* Longevity
+* Leverage billions of dollars worth of existing energy
+* Well understood
+* Tested
+
+
+**Learn more about the tech**
 * https://github.com/pirate/wireguard-docs
 
 ### How to support this project
