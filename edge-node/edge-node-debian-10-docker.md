@@ -3,6 +3,8 @@ https://docs.docker.com/engine/install/debian/
 
 ## Install Docker
 
+[tested: 2020.07.24]
+
 Location: Follow these instructions on your **EDGE NODE**
 
 ```
