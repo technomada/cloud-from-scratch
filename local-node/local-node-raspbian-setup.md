@@ -129,3 +129,4 @@ No wireless device should be listed.
 * https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
 * https://raspberrytips.com/disable-wifi-raspberry-pi/#4_Config_txt
 * https://www.raspberrypi.org/blog/sd-card-speed-test/
+* https://www.raspberrypi.org/documentation/configuration/security.md
