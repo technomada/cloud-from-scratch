@@ -25,7 +25,11 @@ $ sudo dd if=2020-05-27-raspios-buster-lite-armhf.img of=/dev/(yourdevicehere) b
 ```
 $ unzip -p 2020-05-27-raspios-buster-lite-armhf.zip | sudo dd of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
 ```
+Write cached data to disk.
 
+```
+$ sync
+```
 
 ### setup headless
 **Enable ssh:** place a file named ssh, without any extension, onto the **boot partition** before booting.
