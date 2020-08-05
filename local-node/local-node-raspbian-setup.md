@@ -18,12 +18,12 @@ $ lsblk
 
 Copy the os image to sdcard (this will erase everything on the sdcard)  dd is one option, use a disk imaging tool you're comfortable with.
 ```
-$ unzip 2020-02-13-raspbian-buster-lite.zip
-$ sudo dd if=2020-02-13-raspbian-buster-lite.img of=/dev/(yourdevicehere) bs=4M status=progress conv=fsync
+$ unzip 2020-05-27-raspios-buster-lite-armhf.zip
+$ sudo dd if=2020-05-27-raspios-buster-lite-armhf.img of=/dev/(yourdevicehere) bs=4M status=progress conv=fsync
 ```
 **or** the same thing in one step
 ```
-$ unzip -p 2020-02-13-raspbian-buster-lite.zip | sudo dd of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
+$ unzip -p 2020-05-27-raspios-buster-lite-armhf.zip | sudo dd of=/dev/(yourdevhere) bs=4M status=progress conv=fsync
 ```
 
 
