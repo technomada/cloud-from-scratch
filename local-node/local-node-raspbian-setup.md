@@ -1,9 +1,9 @@
 ## Install and configure Raspbian
-[ updated 2020.06.30]
+[ updated 2020.08.05]
 
 Location: Follow these instructions on your **LOCAL NODE**
 
-Download the pi os iso.  (2020-05-27-raspios-buster-lite-armhf.zip at the time of this tutorial)
+Download the pi os iso.  See https://www.raspberrypi.org/downloads/ (2020-05-27-raspios-buster-lite-armhf.zip at the time of this tutorial)
 
 Create the bootable sdcard
 
