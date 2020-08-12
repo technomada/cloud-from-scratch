@@ -30,8 +30,10 @@ For `generic instructions` click the url right of "--"
 * https://awesomeopensource.com/projects/cloud
 * https://bitnami.com/stacks/containers
 * https://github.com/awesome-selfhosted/awesome-selfhosted
+* https://github.com/n1trux/awesome-sysadmin
 * https://github.com/redecentralize/alternative-internet#cloud
 * https://www.linuxserver.io/ (https://docs.linuxserver.io/)
+
 
 ## Also Consider
 * https://awesomeopensource.com/projects/web-application
