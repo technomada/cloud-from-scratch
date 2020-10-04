@@ -84,7 +84,7 @@ $ sudo mv wg0.conf /etc/wireguard
 
 (on **EDGE NODE**)
 ```
-$ vim /wireguard/etc/wg0.conf
+$ vim /etc/wireguard/wg0.conf
 ```
 
 Copy your **PUBLIC** key of your **LOCAL NODE** to the `your-LOCAL-NODE-public-key-goes-here` in your **EDGE NODE** wg0.conf file.
