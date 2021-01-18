@@ -355,6 +355,10 @@ The cloud from scratch project favors using established technologies over buildi
 **Learn more about the tech**
 * https://github.com/pirate/wireguard-docs
 
+**Containerization and digging deeper**
+* https://ericchiang.github.io/post/containers-from-scratch/
+* https://medium.com/swlh/build-containers-from-scratch-in-go-part-1-namespaces-c07d2291038b
+
 ### How to support this project
 * contribute feedback/ideas/recommendations/discoveries
 * report issues (this project contains moving targets)
